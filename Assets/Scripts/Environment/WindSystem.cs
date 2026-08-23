@@ -11,19 +11,18 @@ namespace InkRidge.Environment
     public class WindSystem : MonoBehaviour
     {
         [Header("Wind Properties")]
-        [SerializeField] private float _windSpeed = 2.0f;
-        [SerializeField] private float _windMagnitude = 0.5f;
-        [SerializeField] private float _windTurbulence = 2.0f;
+        [SerializeField] private float _windSpeed = 3.0f;
+        [SerializeField] private float _windMagnitude = 1.5f;
+        [SerializeField] private float _windTurbulence = 2.5f;
         [SerializeField] private Vector2 _windDirection = new Vector2(1f, 0.3f);
-        [SerializeField] private float _gustDensity = 0.8f;
+        [SerializeField] private float _gustDensity = 1.0f;
 
         [Header("Intensity")]
         [SerializeField] private float _targetIntensity = 1f;
         [SerializeField] private float _transitionSpeed = 2f;
 
-        private float _currentIntensity;
+        private float _currentIntensity = 1f;
 
-        // Shader property IDs
         private static readonly int WindSpeedId = Shader.PropertyToID("_WindSpeed");
         private static readonly int WindMagnitudeId = Shader.PropertyToID("_WindMagnitude");
         private static readonly int WindTurbulenceId = Shader.PropertyToID("_WindTurbulence");
@@ -32,18 +31,11 @@ namespace InkRidge.Environment
         private static readonly int GustDensityId = Shader.PropertyToID("_GustDensity");
         private static readonly int WindIntensityId = Shader.PropertyToID("_WindIntensity");
 
-        void Start()
-        {
-            _currentIntensity = 0f;
-        }
-
         void Update()
         {
-            // Smooth transition to target intensity
             _currentIntensity = Mathf.Lerp(_currentIntensity, _targetIntensity,
                 _transitionSpeed * Time.deltaTime);
 
-            // Animate wind direction slowly
             float t = Time.time * 0.1f;
             Vector2 dir = _windDirection + new Vector2(Mathf.Sin(t) * 0.2f, Mathf.Cos(t * 0.7f) * 0.2f);
             dir.Normalize();
