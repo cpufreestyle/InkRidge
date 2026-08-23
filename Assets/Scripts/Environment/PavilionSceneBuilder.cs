@@ -128,9 +128,9 @@ namespace InkRidge.Environment
 
         private void BuildSurroundingTrees()
         {
-            var trunkMat = MakeMat(GongbiColors.DarkWood, 0.008f);
-            var leafMat = MakeMat(new Color(0.18f, 0.35f, 0.14f), 0.004f);
-            var darkLeafMat = MakeMat(new Color(0.10f, 0.28f, 0.10f), 0.004f);
+            var trunkMat = MakeWindMat(GongbiColors.DarkWood, 0.3f, 0.008f);
+            var leafMat = MakeWindMat(new Color(0.18f, 0.35f, 0.14f), 0.8f, 0.004f);
+            var darkLeafMat = MakeWindMat(new Color(0.10f, 0.28f, 0.10f), 0.7f, 0.004f);
             var rng = new System.Random(22);
 
             for (int i = 0; i < _treeCount; i++)

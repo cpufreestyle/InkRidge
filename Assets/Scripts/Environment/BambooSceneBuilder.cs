@@ -79,10 +79,10 @@ namespace InkRidge.Environment
 
         private void BuildBambooForest()
         {
-            var bambooMat = MakeMat(GongbiColors.BambooGreen, 0.008f);
-            var darkBambooMat = MakeMat(new Color(0.30f, 0.50f, 0.25f), 0.008f);
-            var leafMat = MakeMat(GongbiColors.EmeraldGreen, 0.004f);
-            var darkLeafMat = MakeMat(new Color(0.12f, 0.38f, 0.16f), 0.004f);
+            var bambooMat = MakeWindMat(GongbiColors.BambooGreen, 0.6f, 0.008f);
+            var darkBambooMat = MakeWindMat(new Color(0.30f, 0.50f, 0.25f), 0.5f, 0.008f);
+            var leafMat = MakeWindMat(GongbiColors.EmeraldGreen, 0.8f, 0.004f);
+            var darkLeafMat = MakeWindMat(new Color(0.12f, 0.38f, 0.16f), 0.7f, 0.004f);
             var rng = new System.Random(42);
 
             for (int i = 0; i < _bambooCount; i++)

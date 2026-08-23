@@ -26,6 +26,15 @@ namespace InkRidge.Environment
             mat.SetColor("_ShadowColor", GongbiColors.Shadow(mainColor));
             mat.SetColor("_OutlineColor", GongbiColors.InkOutline);
             mat.SetFloat("_OutlineWidth", outlineWidth);
+            mat.SetFloat("_WindSway", 0f); // default: no wind
+            return mat;
+        }
+
+        /// <summary>Create a material that sways in the wind (for vegetation).</summary>
+        protected Material MakeWindMat(Color mainColor, float swayAmount = 0.5f, float outlineWidth = 0.01f)
+        {
+            var mat = MakeMat(mainColor, outlineWidth);
+            mat.SetFloat("_WindSway", swayAmount);
             return mat;
         }
 
