@@ -20,6 +20,9 @@ namespace InkRidge.Environment
             BuildScatteredRocks();
             BuildMeditationPlatform();
             BuildBoundaryWalls();
+            var fogObj = new GameObject("GradientFog");
+            fogObj.transform.SetParent(_root.transform);
+            fogObj.AddComponent<GradientFog>();
             SetupLighting(GongbiColors.WarmLight, new Vector3(0.3f, -0.7f, 0.3f), 1.1f);
             SetupFog(new Color(0.82f, 0.87f, 0.92f), 0.03f);
         }

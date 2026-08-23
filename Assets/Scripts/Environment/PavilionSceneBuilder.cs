@@ -17,6 +17,13 @@ namespace InkRidge.Environment
             BuildStonePath();
             BuildMeditationPoint();
             BuildBoundaryWalls();
+            var fogObj = new GameObject("GradientFog");
+            fogObj.transform.SetParent(_root.transform);
+            fogObj.AddComponent<GradientFog>();
+            // Wind for tree swaying
+            var windObj = new GameObject("WindSystem");
+            windObj.transform.SetParent(_root.transform);
+            var wind = windObj.AddComponent<WindSystem>();
             SetupLighting(GongbiColors.WarmLight, new Vector3(0.4f, -0.5f, 0.5f), 1.0f);
             SetupFog(new Color(0.93f, 0.91f, 0.89f), 0.04f);
         }

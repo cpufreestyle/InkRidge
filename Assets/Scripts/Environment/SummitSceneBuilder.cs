@@ -59,34 +59,15 @@ namespace InkRidge.Environment
 
         private void BuildStarfield()
         {
+            // Procedural starfield using StarfieldRenderer (adapted from Daydream Elements)
             var starObj = new GameObject("Starfield");
             starObj.transform.SetParent(_root.transform);
-            var ps = starObj.AddComponent<ParticleSystem>();
-            var main = ps.main;
-            main.startColor = new Color(0.95f, 0.95f, 1f);
-            main.startSize = 0.06f;
-            main.startLifetime = 999f;
-            main.loop = false;
-            main.maxParticles = 800;
-
-            var emission = ps.emission;
-            emission.rateOverTime = 800;
-
-            var shape = ps.shape;
-            shape.shapeType = ParticleSystemShapeType.Sphere;
-            shape.radius = 60f;
-
-            // Add twinkling via size over lifetime
-            var sizeOverLife = ps.sizeOverLifetime;
-            sizeOverLife.enabled = true;
-            sizeOverLife.size = new AnimationCurve(
-                new Keyframe(0f, 0.5f),
-                new Keyframe(0.3f, 1f),
-                new Keyframe(0.6f, 0.3f),
-                new Keyframe(1f, 0.8f)
-            );
-
-            ps.Play();
+            starObj.AddComponent<MeshFilter>();
+            var starMR = starObj.AddComponent<MeshRenderer>();
+            var starMat = new Material(Shader.Find("Unlit/Color"));
+            starMat.color = new Color(0.95f, 0.95f, 1f);
+            starMR.material = starMat;
+            var starRenderer = starObj.AddComponent<StarfieldRenderer>();
 
             // Moon
             var moonMat = MakeMat(new Color(0.95f, 0.93f, 0.85f), 0.003f);

@@ -65,12 +65,14 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/Meditation/MeditationPoint.cs" />
     <Compile Include="Assets/Scripts/GongbiColors.cs" />
+    <Compile Include="Assets/Scripts/Environment/StarfieldRenderer.cs" />
     <Compile Include="Assets/Scripts/Environment/SceneBuilder.cs" />
     <Compile Include="Assets/Scripts/Environment/WaterfallSceneBuilder.cs" />
     <Compile Include="Assets/Scripts/Movement/LocomotionController.cs" />
     <Compile Include="Assets/Scripts/Environment/SummitSceneBuilder.cs" />
     <Compile Include="Assets/Scripts/Environment/AmbientAudio.cs" />
     <Compile Include="Assets/Scripts/Core/SceneTransition.cs" />
+    <Compile Include="Assets/Scripts/Environment/GradientFog.cs" />
     <Compile Include="Assets/Scripts/Meditation/BreathGuide.cs" />
     <Compile Include="Assets/Scripts/Core/GameManager.cs" />
     <Compile Include="Assets/Scripts/Data/SaveManager.cs" />
@@ -82,6 +84,7 @@
     <Compile Include="Assets/Scripts/Environment/BambooSceneBuilder.cs" />
     <Compile Include="Assets/Scripts/Movement/ClimbInteractable.cs" />
     <Compile Include="Assets/Scripts/Meditation/BreathData.cs" />
+    <Compile Include="Assets/Scripts/Environment/WindSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Scripts/InkRidge.asmdef" />

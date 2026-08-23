@@ -24,6 +24,14 @@ namespace InkRidge.Environment
             BuildRocks();
             BuildMeditationPoint();
             BuildBoundaryWalls();
+            // Add wind system for bamboo swaying
+            var windObj = new GameObject("WindSystem");
+            windObj.transform.SetParent(_root.transform);
+            windObj.AddComponent<WindSystem>();
+            // Add gradient fog for ink-painting atmosphere
+            var fogObj = new GameObject("GradientFog");
+            fogObj.transform.SetParent(_root.transform);
+            fogObj.AddComponent<GradientFog>();
             SetupLighting(GongbiColors.WarmLight, new Vector3(0.5f, -0.6f, 0.4f), 1.2f);
             SetupFog(new Color(0.90f, 0.87f, 0.82f), 0.025f);
         }
