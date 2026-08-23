@@ -75,7 +75,10 @@
     <Compile Include="Assets/Scripts/Core/SceneTransition.cs" />
     <Compile Include="Assets/Scripts/Environment/GradientFog.cs" />
     <Compile Include="Assets/Scripts/Meditation/BreathGuide.cs" />
+    <Compile Include="Assets/Scripts/Environment/MeditationLightPulse.cs" />
+    <Compile Include="Assets/Scripts/Core/AudioMixerController.cs" />
     <Compile Include="Assets/Scripts/Core/GameManager.cs" />
+    <Compile Include="Assets/Scripts/Environment/BreathAudioSync.cs" />
     <Compile Include="Assets/Scripts/Data/SaveManager.cs" />
     <Compile Include="Assets/Scripts/Environment/ParticleBreath.cs" />
     <Compile Include="Assets/Scripts/Core/ComfortSettings.cs" />
