@@ -77,6 +77,23 @@ namespace InkRidge.Environment
             return go;
         }
 
+        /// <summary>
+        /// Set a solid color skybox (ink-painting style: top darker, bottom lighter).
+        /// </summary>
+        protected void SetupSkybox(Color topColor, Color horizonColor)
+        {
+            // Use a gradient material as skybox via a simple shader
+            var skyMat = new Material(Shader.Find("Skybox/Procedural"));
+            if (skyMat != null)
+            {
+                skyMat.SetColor("_SkyTint", topColor);
+                skyMat.SetColor("_HorizonColor", horizonColor);
+                skyMat.SetFloat("_AtmosphereThickness", 0.5f);
+                skyMat.SetFloat("_SunSize", 0.0f);
+                RenderSettings.skybox = skyMat;
+            }
+        }
+
         protected void SetupFog(Color fogColor, float density)
         {
             RenderSettings.fog = true;
@@ -84,10 +101,11 @@ namespace InkRidge.Environment
             RenderSettings.fogColor = fogColor;
             RenderSettings.fogDensity = density;
             RenderSettings.ambientLight = GongbiColors.WarmAmbient;
+            RenderSettings.ambientIntensity = 1.2f;
         }
 
         protected void SetupLighting(Color lightColor, Vector3 lightDir,
-            float intensity = 0.9f)
+            float intensity = 1.1f)
         {
             var lightObj = new GameObject("DirectionalLight");
             lightObj.transform.SetParent(_root.transform);
@@ -97,6 +115,8 @@ namespace InkRidge.Environment
             light.color = lightColor;
             light.intensity = intensity;
             light.shadows = LightShadows.Soft;
+            light.shadowBias = 0.001f;
+            light.shadowNormalBias = 0.4f;
         }
 
         protected virtual void Start()
