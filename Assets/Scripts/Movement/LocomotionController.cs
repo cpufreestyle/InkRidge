@@ -1,6 +1,8 @@
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
-using UnityEngine.XR.Interaction.Toolkit.Locomotion;
+using Unity.XR.CoreUtils;
+using UnityEngine.XR.Interaction.Toolkit.Locomotion.Movement;
+using UnityEngine.XR.Interaction.Toolkit.Locomotion.Turning;
+using InkRidge.Core;
 
 namespace InkRidge.Movement
 {

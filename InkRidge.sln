@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InkRidge", "InkRidge.csproj", "{3862F999-8E98-22C1-4823-E9833E93BBBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{81AF32D3-5A02-D16F-E3AD-6D09899B76A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests.csproj", "{73CB1D34-8DBB-C848-069E-39947800FE04}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3862F999-8E98-22C1-4823-E9833E93BBBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3862F999-8E98-22C1-4823-E9833E93BBBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3862F999-8E98-22C1-4823-E9833E93BBBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3862F999-8E98-22C1-4823-E9833E93BBBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81AF32D3-5A02-D16F-E3AD-6D09899B76A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81AF32D3-5A02-D16F-E3AD-6D09899B76A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81AF32D3-5A02-D16F-E3AD-6D09899B76A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81AF32D3-5A02-D16F-E3AD-6D09899B76A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73CB1D34-8DBB-C848-069E-39947800FE04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73CB1D34-8DBB-C848-069E-39947800FE04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73CB1D34-8DBB-C848-069E-39947800FE04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73CB1D34-8DBB-C848-069E-39947800FE04}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

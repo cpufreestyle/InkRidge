@@ -19,7 +19,6 @@ namespace InkRidge.Movement
             _grabInteractable = GetComponent<XRGrabInteractable>();
             _grabInteractable.movementType = XRBaseInteractable.MovementType.VelocityTracking;
             _grabInteractable.trackRotation = false;
-            _grabInteractable.transform.SetParent(transform);
         }
     }
 }

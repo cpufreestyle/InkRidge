@@ -92,7 +92,7 @@ namespace InkRidge.UI
         private void OnSeatedChanged(bool value)
         {
             ComfortSettings.SeatedMode = value;
-            var loco = FindFirstObjectByType<LocomotionController>();
+            var loco = FindObjectOfType<LocomotionController>();
             if (loco != null) loco.ApplySettings();
         }
 

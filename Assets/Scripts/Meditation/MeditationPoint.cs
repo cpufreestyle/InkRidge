@@ -1,6 +1,7 @@
 using UnityEngine;
 using InkRidge.Data;
 using InkRidge.Core;
+using InkRidge.Environment;
 
 namespace InkRidge.Meditation
 {
