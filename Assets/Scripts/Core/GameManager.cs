@@ -12,15 +12,11 @@ namespace InkRidge.Core
         public static GameManager Instance { get; private set; }
 
         [Header("Scene Indices (Build Settings order)")]
-        [SerializeField] private int _startSceneIndex = 0;
         [SerializeField] private int _bambooSceneIndex = 1;
-        [SerializeField] private int _waterfallSceneIndex = 2;
-        [SerializeField] private int _pavilionSceneIndex = 3;
         [SerializeField] private int _summitSceneIndex = 4;
         [SerializeField] private int _endSceneIndex = 5;
 
         private float _sceneWalkTimer;
-        private int _currentSceneIndex;
 
         void Awake()
         {
@@ -54,7 +50,6 @@ namespace InkRidge.Core
 
         public void StartGame()
         {
-            _currentSceneIndex = _bambooSceneIndex;
             _sceneWalkTimer = 0f;
             SceneTransition.Instance?.LoadScene(_bambooSceneIndex);
         }

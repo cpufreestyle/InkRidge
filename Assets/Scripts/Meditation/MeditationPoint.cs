@@ -15,7 +15,6 @@ namespace InkRidge.Meditation
         [Header("Scene Config")]
         [SerializeField] private int _sceneIndex;
         [SerializeField] private string _sceneName = "Bamboo";
-        [SerializeField] private string _themeText = "山不来就你，你便去就山";
 
         [Header("Breath Config")]
         [SerializeField] private BreathGuide.Pattern _pattern = BreathGuide.Pattern.Balanced444;

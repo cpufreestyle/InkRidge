@@ -26,7 +26,6 @@ namespace InkRidge.Movement
             if (_moveProvider != null)
             {
                 _moveProvider.moveSpeed = ComfortSettings.MoveSpeed;
-                _moveProvider.useGravity = true;
             }
 
             if (_turnProvider != null)

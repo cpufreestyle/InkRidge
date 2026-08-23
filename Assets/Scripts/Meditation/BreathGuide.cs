@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 namespace InkRidge.Meditation
@@ -36,7 +35,6 @@ namespace InkRidge.Meditation
         private float _totalTimer;
         private bool _running;
 
-        private float _lastCycleDuration;
         private float _cycleDurationSum;
         private float _cycleDurationSqSum;
         private int _cycleCount;
@@ -137,7 +135,6 @@ namespace InkRidge.Meditation
                             PatternTimings[patternIndex, 1] +
                             PatternTimings[patternIndex, 2] +
                             PatternTimings[patternIndex, 3];
-            _lastCycleDuration = cycleDur;
             _cycleDurationSum += cycleDur;
             _cycleDurationSqSum += cycleDur * cycleDur;
             _cycleCount++;

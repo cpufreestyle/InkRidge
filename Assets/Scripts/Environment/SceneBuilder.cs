@@ -1,5 +1,4 @@
 using UnityEngine;
-using InkRidge.Core;
 
 namespace InkRidge.Environment
 {

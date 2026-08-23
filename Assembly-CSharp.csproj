@@ -66,6 +66,7 @@
     <Compile Include="Assets/Settings/GongbiColors.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets/csc.rsp" />
     <None Include="Assets/Shaders/InkFog.shader" />
     <None Include="Assets/Shaders/GongbiToon.shader" />
     <None Include="Assets/Shaders/BreathCircle.shader" />
