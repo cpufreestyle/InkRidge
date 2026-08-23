@@ -81,6 +81,7 @@
     <Compile Include="Assets/Scripts/Core/ComfortSettings.cs" />
     <Compile Include="Assets/Scripts/UI/SummaryScreen.cs" />
     <Compile Include="Assets/Scripts/UI/XRMenu.cs" />
+    <Compile Include="Assets/Scripts/Core/VignetteEffect.cs" />
     <Compile Include="Assets/Scripts/Environment/PavilionSceneBuilder.cs" />
     <Compile Include="Assets/Scripts/Environment/BambooSceneBuilder.cs" />
     <Compile Include="Assets/Scripts/Movement/ClimbInteractable.cs" />

@@ -1,0 +1,281 @@
+{
+  "schemaVersion": 2,
+  "summary": {
+    "evidenceMode": "session-limited",
+    "evidenceBoundary": {
+      "manifest": {
+        "schemaVersion": 2,
+        "sourceFingerprint": "2dc64829c1ca1f6c",
+        "adapterVersion": "qoder-task-loop-source-v2",
+        "platform": "qoder",
+        "selection": {
+          "strategy": "all-eligible",
+          "eligibleCount": 0,
+          "analyzedCount": 0,
+          "confidence": "Low"
+        }
+      },
+      "episodeCoverage": {
+        "episodeCount": 0,
+        "editedEpisodeCount": 0,
+        "closedEpisodeCount": 0,
+        "recoveredEpisodeCount": 0
+      },
+      "deliveryEvidenceLevels": [],
+      "sourceGaps": []
+    },
+    "semanticFacets": {
+      "schemaVersion": 1,
+      "status": "supplementary",
+      "entries": [
+        {
+          "id": "session-insight:source-coverage",
+          "kind": "redacted-summary",
+          "episodeRef": null,
+          "status": "candidate",
+          "labels": [
+            "source-coverage",
+            "Low"
+          ],
+          "summary": "Analyzed 0 of 0 sessions; 0/6 enabled source roots exist. Use this as the current workspace evidence boundary for final insight cards.",
+          "evidenceRefs": [],
+          "modelVersion": "session-insights-v1"
+        },
+        {
+          "id": "session-insight:validation-behavior",
+          "kind": "redacted-summary",
+          "episodeRef": null,
+          "status": "candidate",
+          "labels": [
+            "validation-behavior",
+            "Low"
+          ],
+          "summary": "No validation command category was observed in the analyzed session sample. Inspect more sessions or add explicit validation guidance before claiming validation-after-edit behavior.",
+          "evidenceRefs": [],
+          "modelVersion": "session-insights-v1"
+        },
+        {
+          "id": "session-insight:post-edit-validation",
+          "kind": "rework-correction",
+          "episodeRef": null,
+          "status": "candidate",
+          "labels": [
+            "post-edit-validation",
+            "Low"
+          ],
+          "summary": "No edit event was observed in the analyzed sample. Inspect more sessions before making claims about edit or validation habits.",
+          "evidenceRefs": [],
+          "modelVersion": "session-insights-v1"
+        },
+        {
+          "id": "session-insight:execution-friction",
+          "kind": "friction-taxonomy",
+          "episodeRef": null,
+          "status": "candidate",
+          "labels": [
+            "execution-friction",
+            "Low"
+          ],
+          "summary": "No strong execution friction signal in the analyzed sample. Keep friction claims narrow unless additional failed commands, rejected actions, or warnings are inspected.",
+          "evidenceRefs": [],
+          "modelVersion": "session-insights-v1"
+        }
+      ]
+    },
+    "learningCapture": {
+      "schemaVersion": 1,
+      "state": "N/A",
+      "summary": "暂不适用——需要两个可比的观察窗口和一次改进对比。",
+      "interventions": []
+    },
+    "aiAgentPractice": {
+      "inspectedSurfaces": [],
+      "coverageRows": [
+        {
+          "surface": "Skills",
+          "scopes": [
+            "Global"
+          ],
+          "count": 16,
+          "paths": [
+            "~/.agents/skills/browser-use/SKILL.md",
+            "~/.agents/skills/microsoft-foundry/models/deploy-model/capacity/SKILL.md",
+            "~/.agents/skills/microsoft-foundry/models/deploy-model/customize/SKILL.md",
+            "~/.agents/skills/microsoft-foundry/models/deploy-model/SKILL.md",
+            "~/.agents/skills/figma/SKILL.md",
+            "~/.agents/skills/microsoft-foundry/finetuning/SKILL.md",
+            "~/.agents/skills/hyperframes/SKILL.md",
+            "~/.agents/skills/hyperframes-animation/SKILL.md",
+            "~/.agents/skills/hyperframes-cli/SKILL.md",
+            "~/.agents/skills/hyperframes-core/SKILL.md",
+            "~/.agents/skills/hyperframes-creative/SKILL.md",
+            "~/.agents/skills/hyperframes-keyframes/SKILL.md"
+          ]
+        },
+        {
+          "surface": "Rules",
+          "scopes": [
+            "Project"
+          ],
+          "count": 0
+        },
+        {
+          "surface": "Hooks",
+          "scopes": [
+            "Project"
+          ],
+          "count": 0
+        },
+        {
+          "surface": "Commands",
+          "scopes": [
+            "Project"
+          ],
+          "count": 0
+        },
+        {
+          "surface": "Custom Agents",
+          "scopes": [
+            "Project"
+          ],
+          "count": 0
+        },
+        {
+          "surface": "MCP",
+          "scopes": [
+            "Project"
+          ],
+          "count": 0
+        },
+        {
+          "surface": "Workflows",
+          "scopes": [
+            "Project"
+          ],
+          "count": 0
+        },
+        {
+          "surface": "Memories",
+          "scopes": [
+            "Project"
+          ],
+          "count": 0
+        },
+        {
+          "surface": "Plugins",
+          "scopes": [
+            "Plugin"
+          ],
+          "count": 0
+        }
+      ],
+      "repositorySourceRows": [],
+      "memoryDetails": {
+        "contentPolicy": "metadata-only",
+        "scanState": "scanned-empty",
+        "scopeCounts": [],
+        "integrity": {
+          "status": "reviewed",
+          "titleCount": 0,
+          "reviewedTitleCount": 0,
+          "truncated": false,
+          "exactCollisionGroups": 0,
+          "similarityCandidates": 0
+        }
+      }
+    },
+    "projectName": "InkRidge",
+    "locale": "zh-CN",
+    "modelId": "agent-work-loop-v4",
+    "reportContractVersion": 26,
+    "overview": "InkRidge 是一个早期阶段的 Unity VR 项目，具有清晰的代码组织结构但缺少代理引导基础设施。没有 AGENTS.md、README 或项目级 Harness 机制（Rules、Hooks、Commands），自动化测试仅覆盖 27 个源文件中的 3 个。分析窗口内无可用的会话证据，大多数行为维度处于未观察状态。",
+    "dimensions": [
+      {
+        "id": "task-understanding",
+        "label": "任务理解",
+        "score": 30,
+        "summary": "项目缺少 AGENTS.md 和项目描述，代理无法获取架构、约定或任务边界的引导。代码目录结构（Core、Environment、Meditation、Movement、UI）提供了部分上下文路由。",
+        "findingRefs": [
+          "missing-agent-instructions"
+        ]
+      },
+      {
+        "id": "controlled-execution",
+        "label": "可控执行",
+        "score": 30,
+        "summary": "没有文档化的构建、运行或诊断路径。Unity 版本通过 ProjectVersion.txt 可发现，但缺少运行时、XR 配置和依赖关系的明确说明。",
+        "findingRefs": [
+          "missing-project-setup-documentation"
+        ]
+      },
+      {
+        "id": "change-validation",
+        "label": "改动验证",
+        "score": 45,
+        "summary": "3 个测试文件覆盖了 BreathGuide、ComfortSettings 和测试基础设施，但高频变更的 SceneBuilder 和 WindSystem 模块没有自动化验证。变更验证信号存在但覆盖不完整。",
+        "findingRefs": [
+          "test-coverage-gap-high-change-modules"
+        ]
+      },
+      {
+        "id": "reliable-delivery",
+        "label": "可靠交付",
+        "score": 30,
+        "summary": "没有观察到 CI/CD 管道、合并保护、部署记录或恢复路径。交付接受、高风险审批和回滚机制均处于未观察状态。",
+        "findingRefs": []
+      },
+      {
+        "id": "learning-capture",
+        "label": "经验沉淀",
+        "score": 35,
+        "summary": "30 天窗口内 0 个合格会话和 0 个任务 episode，生命周期机会检测、循环工程和纵向验证均无法进行。项目 Memories 为空。",
+        "findingRefs": []
+      }
+    ],
+    "assignmentSummaries": []
+  },
+  "findings": [
+    {
+      "id": "missing-agent-instructions",
+      "title": "代理缺少项目引导，必须从代码反向推断架构和约定",
+      "severity": "Medium",
+      "reason": "仓库有 27 个源文件分布在 Scripts/Core、Environment、Meditation、Movement、UI 和 Editor 子目录中，21 次近期提交显示 PavilionSceneBuilder.cs（451 churn）和 WindSystem.cs（96 churn）等环境系统处于活跃开发中，但没有 AGENTS.md 或等效的项目引导文件。core-change-watch 明确将 Assets/Scripts（22 个源文件）和 Assets/Editor（5 个源文件）标记为建议的 AGENTS.md 作用域。代理无法获知 SceneBuilder 抽象模式、Gongbi 着色器约定、XR 交互模型或构建/测试命令，必须仅从代码推断上下文，增加了不一致修改的风险。证据边界：项目配置分析已检查，无会话证据可补充行为观察。",
+      "dimensionRefs": [
+        "task-understanding"
+      ],
+      "aiFixPrompt": "/better-harness 修复此问题\n\n在项目根目录创建 AGENTS.md，包含：\n1. 项目简介（Unity VR 冥想体验，工笔画风格）\n2. 代码结构路由（Scripts 子目录职责）\n3. 构建和测试命令（Unity Editor 操作）\n4. 关键架构约定（SceneBuilder 模式、Gongbi 着色器）\n\n为 Assets/Scripts 和 Assets/Editor 考虑作用域级指令文件。\n\n## 验证\n\n- 确认 AGENTS.md 已创建并包含上述各节\n- 从代理视角审查：信息是否足以引导常见修改任务",
+      "expectedArtifact": "Document",
+      "expectedOutput": [
+        "Update the existing Document owner identified by the reviewed evidence and retain a focused validation result."
+      ]
+    },
+    {
+      "id": "test-coverage-gap-high-change-modules",
+      "title": "高频变更的场景构建器和环境系统缺少自动化验证",
+      "severity": "Low",
+      "reason": "项目有 27 个源文件但仅 3 个测试文件（BreathGuideTests、ComfortSettingsTests 和测试基础设施）。30 天内 churn 最高的源文件——PavilionSceneBuilder.cs（451 churn，5 次提交）、WaterfallSceneBuilder.cs（365 churn）、SummitSceneBuilder.cs（341 churn）、BambooSceneBuilder.cs（246 churn）和 WindSystem.cs（96 churn）——均无测试覆盖。LocomotionController.cs、MeditationPoint.cs 和 SaveManager.cs 同样缺少测试。regression-test 扫描检测到源/测试共变更候选但标记为路径不相关。修改这些高频变更模块的代理无法通过自动化检查验证其行为未被破坏。证据边界：测试文件计数和 git churn 数据来自项目配置分析。",
+      "dimensionRefs": [
+        "change-validation"
+      ],
+      "aiFixPrompt": "/better-harness 修复此问题\n\n为 churn 最高的模块添加聚焦单元测试：\n1. PavilionSceneBuilder 的构建输出验证\n2. WindSystem 的风力计算和行为测试\n3. SceneBuilder 基类接口契约测试\n\n## 验证\n\n- 通过 Unity Test Runner 运行完整测试套件\n- 确认新测试通过并覆盖目标模块的关键行为",
+      "expectedArtifact": "Test",
+      "expectedOutput": [
+        "Update the existing Test owner identified by the reviewed evidence and retain a focused validation result."
+      ]
+    },
+    {
+      "id": "missing-project-setup-documentation",
+      "title": "项目没有文档化的设置或运行路径，代理必须猜测如何启动和诊断",
+      "severity": "Low",
+      "reason": "项目没有 README、包清单（manifests 为空）、Makefile、脚本化构建入口或 doctor 路由。Unity 版本仅通过 ProjectVersion.txt 可发现，XR 插件配置存在于 XR/ 和 XRI/ 目录中但没有使用说明。Editor/ 目录包含 SceneSetup.cs、AudioSetup.cs、OptimizeProject.cs、BuildAPK.cs 和 SetAndroidPaths.cs 等编辑器脚本，但没有文档说明其用途或执行顺序。代理无法确定 Unity 版本要求、XR 配置需求、Android 构建路径或场景加载顺序。证据边界：文件清单和 manifest 检查确认无文档化入口点。",
+      "dimensionRefs": [
+        "controlled-execution"
+      ],
+      "aiFixPrompt": "/better-harness 修复此问题\n\n创建 README.md，包含：\n1. Unity 版本要求（从 ProjectVersion.txt 提取）\n2. 如何打开项目（Unity Hub 路径）\n3. 场景顺序和加载方式（00_Start → 01-04 → 99_End）\n4. XR 配置说明\n5. 构建目标（Android APK 通过 BuildAPK.cs）\n6. 编辑器工具用途简述\n\n## 验证\n\n- 确认 README.md 已创建\n- 验证 Unity 版本号与 ProjectVersion.txt 一致\n- 从新开发者/代理视角审查完整性",
+      "expectedArtifact": "Document",
+      "expectedOutput": [
+        "Update the existing Document owner identified by the reviewed evidence and retain a focused validation result."
+      ]
+    }
+  ]
+}
