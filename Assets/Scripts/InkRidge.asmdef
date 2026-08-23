@@ -1,0 +1,9 @@
+{
+    "name": "InkRidge",
+    "rootNamespace": "InkRidge",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "autoReferenced": true
+}
