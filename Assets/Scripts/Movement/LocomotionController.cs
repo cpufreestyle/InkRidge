@@ -16,6 +16,13 @@ namespace InkRidge.Movement
         [SerializeField] private ContinuousMoveProvider _moveProvider;
         [SerializeField] private SnapTurnProvider _turnProvider;
 
+        [Header("Footsteps")]
+        [SerializeField] private AudioSource _footstepSource;
+        [SerializeField] private AudioClip _footstepClip;
+        [SerializeField] private float _stepInterval = 0.8f;
+
+        private float _stepTimer;
+
         void Start()
         {
             ApplySettings();
@@ -37,6 +44,27 @@ namespace InkRidge.Movement
             if (xrOrigin != null)
             {
                 ComfortSettings.ApplySeatedMode(xrOrigin.transform);
+            }
+        }
+
+        void Update()
+        {
+            if (_moveProvider != null && _footstepSource != null && _footstepClip != null)
+            {
+                var input = _moveProvider.leftHandMoveInput;
+                if (input != null && input.TryReadValue(out var value) && value.magnitude > 0.1f)
+                {
+                    _stepTimer += Time.deltaTime;
+                    if (_stepTimer >= _stepInterval)
+                    {
+                        _footstepSource.PlayOneShot(_footstepClip);
+                        _stepTimer = 0f;
+                    }
+                }
+                else
+                {
+                    _stepTimer = _stepInterval;
+                }
             }
         }
     }

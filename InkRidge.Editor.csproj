@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Editor/FixLocomotion.cs" />
+    <Compile Include="Assets/Editor/AudioSetup.cs" />
     <Compile Include="Assets/Editor/WindDebug.cs" />
     <Compile Include="Assets/Editor/FixScene.cs" />
     <Compile Include="Assets/Editor/SceneSetup.cs" />
