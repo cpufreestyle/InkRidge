@@ -19,6 +19,8 @@ Shader "Gongbi/Toon"
     {
         Tags { "RenderType" = "Opaque" "Queue" = "Geometry" }
         LOD 100
+        // Note: GPU instancing disabled due to per-material _WindSway and wind vertex displacement.
+        // Static batching handles most draw call reduction for this project.
 
         // ── Pass 1: Outline (back-face extrusion) ──
         Pass
