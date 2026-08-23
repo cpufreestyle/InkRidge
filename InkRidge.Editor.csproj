@@ -16,10 +16,10 @@
     <Configurations>Debug;Release</Configurations>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>InkRidge.Editor</RootNamespace>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>InkRidge.Editor</AssemblyName>
     <TargetFramework>netstandard2.1</TargetFramework>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
@@ -28,7 +28,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp/bin/Debug/</OutputPath>
-    <DefineConstants>UNITY_2022_3_62;UNITY_2022_3;UNITY_2022;TUANJIE_1_10_0;TUANJIE_1_10;TUANJIE_1;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;TUANJIE_2022_3_OR_NEWER;TUANJIE_1_0_OR_NEWER;TUANJIE_1_1_OR_NEWER;TUANJIE_1_2_OR_NEWER;TUANJIE_1_3_OR_NEWER;TUANJIE_1_4_OR_NEWER;TUANJIE_1_5_OR_NEWER;TUANJIE_1_6_OR_NEWER;TUANJIE_1_7_OR_NEWER;TUANJIE_1_8_OR_NEWER;TUANJIE_1_9_OR_NEWER;TUANJIE_1_10_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;PARALLEL_RENDERING;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;ENABLE_SHADER_CHUNKS_UNLOAD;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_OSX;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_SPATIALTRACKING;UNITY_GPU_DRIVEN_PIPELINE;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;UNITY_TUANJIEGI;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_2022_3_62;UNITY_2022_3;UNITY_2022;TUANJIE_1_10_0;TUANJIE_1_10;TUANJIE_1;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;TUANJIE_2022_3_OR_NEWER;TUANJIE_1_0_OR_NEWER;TUANJIE_1_1_OR_NEWER;TUANJIE_1_2_OR_NEWER;TUANJIE_1_3_OR_NEWER;TUANJIE_1_4_OR_NEWER;TUANJIE_1_5_OR_NEWER;TUANJIE_1_6_OR_NEWER;TUANJIE_1_7_OR_NEWER;TUANJIE_1_8_OR_NEWER;TUANJIE_1_9_OR_NEWER;TUANJIE_1_10_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;PARALLEL_RENDERING;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;ENABLE_SHADER_CHUNKS_UNLOAD;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_OSX;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_SPATIALTRACKING;UNITY_GPU_DRIVEN_PIPELINE;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;UNITY_TUANJIEGI;ENABLE_MONO;NET_4_6;NET_UNITY_4_8;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;UNITY_EDITOR_ONLY_COMPILATION</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169;USG0001</NoWarn>
@@ -54,7 +54,7 @@
     <UnityProjectGenerator>Package</UnityProjectGenerator>
     <UnityProjectGeneratorVersion>2.0.22</UnityProjectGeneratorVersion>
     <UnityProjectGeneratorStyle>SDK</UnityProjectGeneratorStyle>
-    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>StandaloneOSX:2</UnityBuildTarget>
     <UnityVersion>2022.3.62t12</UnityVersion>
   </PropertyGroup>
@@ -64,13 +64,13 @@
     <Analyzer Include="/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Settings/GongbiColors.cs" />
+    <Compile Include="Assets/Editor/FixLocomotion.cs" />
+    <Compile Include="Assets/Editor/WindDebug.cs" />
+    <Compile Include="Assets/Editor/FixScene.cs" />
+    <Compile Include="Assets/Editor/SceneSetup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets/csc.rsp" />
-    <None Include="Assets/Shaders/InkFog.shader" />
-    <None Include="Assets/Shaders/GongbiToon.shader" />
-    <None Include="Assets/Shaders/BreathCircle.shader" />
+    <None Include="Assets/Editor/InkRidge.Editor.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -89,6 +89,10 @@
       <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.AndroidAppViewModule">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/Managed/UnityEngine/UnityEngine.AndroidAppViewModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="UnityEngine.AndroidJNIModule">
       <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/Managed/UnityEngine/UnityEngine.AndroidJNIModule.dll</HintPath>
       <Private>False</Private>
@@ -103,6 +107,10 @@
     </Reference>
     <Reference Include="UnityEngine.AudioModule">
       <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AutoStreamingModule">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/Managed/UnityEngine/UnityEngine.AutoStreamingModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ClothModule">
@@ -177,12 +185,28 @@
       <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/Managed/UnityEngine/UnityEngine.InputLegacyModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.InstantAssetModule">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/Managed/UnityEngine/UnityEngine.InstantAssetModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="UnityEngine.JSONSerializeModule">
       <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.LocalizationModule">
       <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/Managed/UnityEngine/UnityEngine.LocalizationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.NVIDIAModule">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/Managed/UnityEngine/UnityEngine.NVIDIAModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.NvApiModule">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/Managed/UnityEngine/UnityEngine.NvApiModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.OcclusionCullingModule">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/Managed/UnityEngine/UnityEngine.OcclusionCullingModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.OpenHarmonyJSModule">
@@ -269,8 +293,16 @@
       <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.TextureManagerModule">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/Managed/UnityEngine/UnityEngine.TextureManagerModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="UnityEngine.TilemapModule">
       <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TuanjieGIModule">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/Managed/UnityEngine/UnityEngine.TuanjieGIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UIModule">
@@ -421,6 +453,34 @@
       <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/Managed/UnityEditor.Graphs.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.WebGL.Extensions">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.OSXStandalone.Extensions">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.WeixinMiniGame.Extensions">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/PlaybackEngines/WeixinMiniGameSupport/UnityEditor.WeixinMiniGame.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.PlayableAds.Extensions">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/PlaybackEngines/PlayableAdsSupport/UnityEditor.PlayableAds.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>Library/PackageCache/com.unity.analytics@3.8.1/Unity.Analytics.Tracker.dll</HintPath>
       <Private>False</Private>
@@ -429,12 +489,32 @@
       <HintPath>Library/PackageCache/com.unity.analytics@3.8.1/Unity.Analytics.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="unityplastic">
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@2.5.1/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Plastic.Antlr3.Runtime">
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@2.5.1/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Plastic.Newtonsoft.Json">
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@2.5.1/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="log4netPlastic">
+      <HintPath>Library/PackageCache/com.unity.collab-proxy@2.5.1/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
       <HintPath>Library/PackageCache/com.unity.analytics@3.8.1/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
@@ -461,698 +541,537 @@
       <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="netstandard">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/ref/2.1.0/netstandard.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.Win32.Primitives">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/Microsoft.Win32.Primitives.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.AppContext">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.AppContext.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Buffers">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Buffers.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Collections.Concurrent">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Collections.Concurrent.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Collections.NonGeneric">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Collections.NonGeneric.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Collections.Specialized">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Collections.Specialized.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Collections">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Collections.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.ComponentModel.EventBasedAsync">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.ComponentModel.EventBasedAsync.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.ComponentModel.Primitives">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.ComponentModel.Primitives.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.ComponentModel.TypeConverter">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.ComponentModel.TypeConverter.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.ComponentModel">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.ComponentModel.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Console">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Console.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Data.Common">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Data.Common.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Diagnostics.Contracts">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Contracts.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Diagnostics.Debug">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Debug.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Diagnostics.FileVersionInfo">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.FileVersionInfo.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Diagnostics.Process">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Process.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Diagnostics.StackTrace">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.StackTrace.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Diagnostics.TextWriterTraceListener">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.TextWriterTraceListener.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Diagnostics.Tools">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Tools.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Diagnostics.TraceSource">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.TraceSource.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Diagnostics.Tracing">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Tracing.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Drawing.Primitives">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Drawing.Primitives.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Dynamic.Runtime">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Dynamic.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Globalization.Calendars">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Globalization.Calendars.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Globalization.Extensions">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Globalization.Extensions.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Globalization">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Globalization.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.IO.Compression.ZipFile">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.Compression.ZipFile.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.IO.Compression">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.Compression.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.IO.FileSystem.DriveInfo">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.FileSystem.DriveInfo.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.IO.FileSystem.Primitives">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.FileSystem.Primitives.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.IO.FileSystem.Watcher">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.FileSystem.Watcher.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.IO.FileSystem">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.FileSystem.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.IO.IsolatedStorage">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.IsolatedStorage.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.IO.MemoryMappedFiles">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.MemoryMappedFiles.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.IO.Pipes">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.Pipes.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.IO.UnmanagedMemoryStream">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.UnmanagedMemoryStream.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.IO">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Linq.Expressions">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Linq.Expressions.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Linq.Parallel">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Linq.Parallel.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Linq.Queryable">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Linq.Queryable.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Linq">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Linq.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Memory">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Memory.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Net.Http">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Http.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Net.NameResolution">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.NameResolution.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Net.NetworkInformation">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.NetworkInformation.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Net.Ping">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Ping.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Net.Primitives">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Primitives.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Net.Requests">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Requests.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Net.Security">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Security.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Net.Sockets">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Sockets.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Net.WebHeaderCollection">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.WebHeaderCollection.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Net.WebSockets.Client">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.WebSockets.Client.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Net.WebSockets">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.WebSockets.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Numerics.Vectors">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Numerics.Vectors.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.ObjectModel">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.ObjectModel.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Reflection.DispatchProxy">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.DispatchProxy.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Reflection.Emit.ILGeneration">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Emit.ILGeneration.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Reflection.Emit.Lightweight">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Emit.Lightweight.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Reflection.Emit">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Emit.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Reflection.Extensions">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Extensions.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Reflection.Primitives">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Primitives.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Reflection">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Resources.Reader">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Resources.Reader.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Resources.ResourceManager">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Resources.ResourceManager.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Resources.Writer">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Resources.Writer.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Runtime.CompilerServices.VisualC">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.CompilerServices.VisualC.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Runtime.Extensions">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Extensions.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Runtime.Handles">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Handles.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Runtime.InteropServices">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.InteropServices.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Runtime.Numerics">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Numerics.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization.Formatters">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Formatters.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization.Json">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Json.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization.Primitives">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Primitives.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization.Xml">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Xml.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Runtime">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Security.Claims">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Claims.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Security.Cryptography.Algorithms">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Algorithms.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Security.Cryptography.Csp">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Csp.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Security.Cryptography.Encoding">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Encoding.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Security.Cryptography.Primitives">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Primitives.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Security.Cryptography.X509Certificates">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.X509Certificates.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Security.Principal">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Principal.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Security.SecureString">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.SecureString.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Text.Encoding.Extensions">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Text.Encoding.Extensions.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Text.Encoding">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Text.Encoding.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Text.RegularExpressions">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Text.RegularExpressions.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Threading.Overlapped">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Overlapped.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Threading.Tasks.Extensions">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Tasks.Extensions.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Threading.Tasks.Parallel">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Tasks.Parallel.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Threading.Tasks">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Tasks.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Threading.Thread">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Thread.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Threading.ThreadPool">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.ThreadPool.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Threading.Timer">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Timer.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Threading">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.ValueTuple">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.ValueTuple.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Xml.ReaderWriter">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.ReaderWriter.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Xml.XDocument">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XDocument.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Xml.XPath.XDocument">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XPath.XDocument.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Xml.XPath">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XPath.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Xml.XmlDocument">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XmlDocument.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Xml.XmlSerializer">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XmlSerializer.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.ComponentModel.Composition">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.ComponentModel.Composition.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Core">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Core.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Data">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Data.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Drawing">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Drawing.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.IO.Compression.FileSystem">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.IO.Compression.FileSystem.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Net">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Net.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Numerics">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Numerics.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Runtime.Serialization.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.ServiceModel.Web">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.ServiceModel.Web.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Transactions">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Transactions.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Web">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Web.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Windows">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Windows.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Xml.Linq">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Xml.Linq.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Xml.Serialization">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Xml">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Xml.dll</HintPath>
+    <Reference Include="mscorlib">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/mscorlib.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.dll</HintPath>
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/System.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="mscorlib">
-      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll</HintPath>
+    <Reference Include="System.Core">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/System.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.XR.Management">
-      <HintPath>Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/System.Runtime.Serialization.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.XR.Interaction.Toolkit.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.XR.Interaction.Toolkit.Editor.dll</HintPath>
+    <Reference Include="System.Xml">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/System.Xml.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine.Purchasing.Stores">
-      <HintPath>Library/ScriptAssemblies/UnityEngine.Purchasing.Stores.dll</HintPath>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/System.Xml.Linq.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.AI.Navigation">
-      <HintPath>Library/ScriptAssemblies/Unity.AI.Navigation.dll</HintPath>
+    <Reference Include="System.Numerics">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/System.Numerics.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/System.Numerics.Vectors.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Services.Core">
-      <HintPath>Library/ScriptAssemblies/Unity.Services.Core.dll</HintPath>
+    <Reference Include="System.Net.Http">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/System.Net.Http.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    <Reference Include="System.IO.Compression">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/System.IO.Compression.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    <Reference Include="Microsoft.CSharp">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Microsoft.CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+    <Reference Include="System.Data">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/System.Data.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.XR.CoreUtils">
-      <HintPath>Library/ScriptAssemblies/Unity.XR.CoreUtils.dll</HintPath>
+    <Reference Include="System.Data.DataSetExtensions">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/System.Data.DataSetExtensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Services.Core.Environments">
-      <HintPath>Library/ScriptAssemblies/Unity.Services.Core.Environments.dll</HintPath>
+    <Reference Include="System.Drawing">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/System.Drawing.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.XR.Interaction.Toolkit.Analytics.Hooks.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.XR.Interaction.Toolkit.Analytics.Hooks.Editor.dll</HintPath>
+    <Reference Include="System.IO.Compression.FileSystem">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/System.IO.Compression.FileSystem.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine.Purchasing.SecurityCore">
-      <HintPath>Library/ScriptAssemblies/UnityEngine.Purchasing.SecurityCore.dll</HintPath>
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/System.ComponentModel.Composition.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.XR.Management.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
+    <Reference Include="System.Transactions">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/System.Transactions.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine.Purchasing.Codeless">
-      <HintPath>Library/ScriptAssemblies/UnityEngine.Purchasing.Codeless.dll</HintPath>
+    <Reference Include="Microsoft.Win32.Primitives">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/Microsoft.Win32.Primitives.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.XR.CoreUtils.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.XR.CoreUtils.Editor.dll</HintPath>
+    <Reference Include="System.AppContext">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.AppContext.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    <Reference Include="System.Buffers">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Buffers.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEditor.Purchasing">
-      <HintPath>Library/ScriptAssemblies/UnityEditor.Purchasing.dll</HintPath>
+    <Reference Include="System.Collections.Concurrent">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Collections.Concurrent.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Services.Core.Analytics">
-      <HintPath>Library/ScriptAssemblies/Unity.Services.Core.Analytics.dll</HintPath>
+    <Reference Include="System.Collections.NonGeneric">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Collections.NonGeneric.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
-      <HintPath>Library/ScriptAssemblies/Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
+    <Reference Include="System.Collections.Specialized">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Collections.Specialized.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    <Reference Include="System.Collections">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Collections.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.XR.Oculus.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.XR.Oculus.Editor.dll</HintPath>
+    <Reference Include="System.ComponentModel.Annotations">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.ComponentModel.Annotations.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.EventBasedAsync">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.ComponentModel.EventBasedAsync.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.ComponentModel.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.TypeConverter">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.ComponentModel.TypeConverter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.ComponentModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Console">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Console.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.Common">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Data.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Contracts">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Diagnostics.Contracts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Debug">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Diagnostics.Debug.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.FileVersionInfo">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Diagnostics.FileVersionInfo.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Process">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Diagnostics.Process.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.StackTrace">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Diagnostics.StackTrace.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.TextWriterTraceListener">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Diagnostics.TextWriterTraceListener.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tools">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Diagnostics.Tools.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.TraceSource">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Diagnostics.TraceSource.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing.Primitives">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Drawing.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Dynamic.Runtime">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Dynamic.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Globalization.Calendars.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Globalization.Extensions">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Globalization.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Globalization">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Globalization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.ZipFile">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.DriveInfo">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.IO.FileSystem.DriveInfo.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Watcher">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.IO.FileSystem.Watcher.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.IO.FileSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.IsolatedStorage">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.IO.IsolatedStorage.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.MemoryMappedFiles">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.IO.MemoryMappedFiles.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Pipes">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.IO.Pipes.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.UnmanagedMemoryStream">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.IO.UnmanagedMemoryStream.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.IO.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq.Expressions">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Linq.Expressions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq.Parallel">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Linq.Parallel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq.Queryable">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Linq.Queryable.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Linq.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Memory.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Rtc">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Net.Http.Rtc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.NameResolution">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Net.NameResolution.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.NetworkInformation">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Net.NetworkInformation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Ping">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Net.Ping.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Primitives">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Net.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Requests">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Net.Requests.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Security">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Net.Security.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Sockets">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Net.Sockets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.WebHeaderCollection">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Net.WebHeaderCollection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.WebSockets.Client">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Net.WebSockets.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.WebSockets">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Net.WebSockets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ObjectModel">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.ObjectModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.DispatchProxy">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Reflection.DispatchProxy.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.ILGeneration">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Reflection.Emit.ILGeneration.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.Lightweight">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Reflection.Emit.Lightweight.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Emit">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Reflection.Emit.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Extensions">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Reflection.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Primitives">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Reflection.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Reflection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Resources.Reader">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Resources.Reader.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Resources.ResourceManager">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Resources.ResourceManager.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Resources.Writer">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Resources.Writer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.VisualC">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Runtime.CompilerServices.VisualC.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Runtime.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Handles">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Runtime.Handles.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Runtime.InteropServices.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Numerics">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Runtime.Numerics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Runtime.Serialization.Formatters.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Json">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Runtime.Serialization.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Primitives">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Runtime.Serialization.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Xml">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Runtime.Serialization.Xml.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Claims">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Security.Claims.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Csp">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Security.Cryptography.Csp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Principal">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Security.Principal.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.SecureString">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Security.SecureString.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Duplex">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.ServiceModel.Duplex.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Http">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.ServiceModel.Http.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.NetTcp">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.ServiceModel.NetTcp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Primitives">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.ServiceModel.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Security">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.ServiceModel.Security.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Text.Encoding.Extensions">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Text.Encoding.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Text.Encoding">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Text.Encoding.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Text.RegularExpressions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Overlapped">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Threading.Overlapped.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Parallel">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Threading.Tasks.Parallel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Threading.Tasks.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Thread">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Threading.Thread.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.ThreadPool">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Threading.ThreadPool.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Timer">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Threading.Timer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Threading.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ValueTuple">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.ValueTuple.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.ReaderWriter">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Xml.ReaderWriter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XDocument">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Xml.XDocument.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XPath.XDocument">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XPath">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Xml.XPath.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XmlDocument">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Xml.XmlDocument.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XmlSerializer">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/System.Xml.XmlSerializer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/TuanjieReferenceAssemblies/tuanjie-4.8-api/Facades/netstandard.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.XR.Interaction.Toolkit">
       <HintPath>Library/ScriptAssemblies/Unity.XR.Interaction.Toolkit.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine.Purchasing">
-      <HintPath>Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-      <HintPath>Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing.SecurityStub">
-      <HintPath>Library/ScriptAssemblies/UnityEngine.Purchasing.SecurityStub.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-      <HintPath>Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.SpatialTracking">
-      <HintPath>Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Purchasing.Common">
-      <HintPath>Library/ScriptAssemblies/Purchasing.Common.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Analytics">
-      <HintPath>Library/ScriptAssemblies/Analytics.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.Advertisements.Editor">
-      <HintPath>Library/ScriptAssemblies/UnityEngine.Advertisements.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-      <HintPath>Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-      <HintPath>Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+    <Reference Include="Unity.XR.CoreUtils">
+      <HintPath>Library/ScriptAssemblies/Unity.XR.CoreUtils.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.InputSystem">
       <HintPath>Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.InputSystem.ForUI">
-      <HintPath>Library/ScriptAssemblies/Unity.InputSystem.ForUI.dll</HintPath>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Services.Core.Components">
-      <HintPath>Library/ScriptAssemblies/Unity.Services.Core.Components.dll</HintPath>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.XR.Oculus">
-      <HintPath>Library/ScriptAssemblies/Unity.XR.Oculus.dll</HintPath>
+    <Reference Include="UnityEditor.TestRunner">
+      <HintPath>Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Services.Analytics">
-      <HintPath>Library/ScriptAssemblies/Unity.Services.Analytics.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.AI.Navigation.Updater">
-      <HintPath>Library/ScriptAssemblies/Unity.AI.Navigation.Updater.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.XR.Interaction.Toolkit.Analytics.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.XR.Interaction.Toolkit.Analytics.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Mathematics">
-      <HintPath>Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.AI.Navigation.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.AI.Navigation.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="InkRidge.csproj" />
-    <ProjectReference Include="InkRidge.Editor.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>

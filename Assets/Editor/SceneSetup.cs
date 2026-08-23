@@ -80,6 +80,7 @@ public class SceneSetup
         // Add BambooSceneBuilder
         var sceneRoot = new GameObject("SceneRoot");
         sceneRoot.AddComponent<BambooSceneBuilder>();
+        EditorUtility.SetDirty(sceneRoot);
 
         // Add GameManager
         var gmObj = new GameObject("GameManager");
