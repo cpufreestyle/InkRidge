@@ -60,20 +60,20 @@ Shader "Gongbi/Toon"
             };
 
             // Apply wind displacement to a vertex position
-            float3 ApplyWind(float3 worldPos, float localY)
+            float3 ApplyWind(float3 worldPos)
             {
                 if (_WindSway <= 0.001) return worldPos;
 
-                // Higher vertices sway more
-                float heightFactor = saturate(localY * _WindHeightFactor * 0.15);
+                // Use WORLD Y for height factor (each bamboo segment has small local Y)
+                float heightFactor = saturate(worldPos.y * 0.12);
 
-                // Primary sway: sinusoidal based on time and height
-                float swayPhase = _Time.y * _WindSpeed + localY * _GustDensity * 3.0;
-                float sway = sin(swayPhase) * _WindMagnitude * _WindIntensity * _WindSway * heightFactor;
+                // Primary sway: sinusoidal based on time and world height
+                float swayPhase = _Time.y * _WindSpeed + worldPos.y * _GustDensity * 0.3;
+                float sway = sin(swayPhase) * _WindMagnitude * _WindIntensity * _WindSway * heightFactor * 3.0;
 
                 // Turbulence: secondary noise-like variation
                 float turb = sin(swayPhase * _WindTurbulence + worldPos.x * 0.5) * 0.3;
-                sway += turb * _WindMagnitude * _WindIntensity * _WindSway * heightFactor;
+                sway += turb * _WindMagnitude * _WindIntensity * _WindSway * heightFactor * 3.0;
 
                 // Apply along wind direction
                 worldPos.x += _WindDirectionX * sway;
@@ -88,7 +88,7 @@ Shader "Gongbi/Toon"
 
                 // Apply wind displacement before outline extrusion
                 float3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
-                worldPos = ApplyWind(worldPos, v.vertex.y);
+                worldPos = ApplyWind(worldPos);
                 float3 viewPos = mul(UNITY_MATRIX_V, float4(worldPos, 1.0)).xyz;
 
                 float3 viewNormal = normalize(mul((float3x3)UNITY_MATRIX_IT_MV, v.normal));
@@ -163,14 +163,14 @@ Shader "Gongbi/Toon"
             if (_WindSway <= 0.001) return;
 
             float3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
-            float localY = v.vertex.y;
 
-            float heightFactor = saturate(localY * _WindHeightFactor * 0.15);
-            float swayPhase = _Time.y * _WindSpeed + localY * _GustDensity * 3.0;
-            float sway = sin(swayPhase) * _WindMagnitude * _WindIntensity * _WindSway * heightFactor;
+            // Use WORLD Y for height factor (segments have small local Y)
+            float heightFactor = saturate(worldPos.y * 0.12);
+            float swayPhase = _Time.y * _WindSpeed + worldPos.y * _GustDensity * 0.3;
+            float sway = sin(swayPhase) * _WindMagnitude * _WindIntensity * _WindSway * heightFactor * 3.0;
 
             float turb = sin(swayPhase * _WindTurbulence + worldPos.x * 0.5) * 0.3;
-            sway += turb * _WindMagnitude * _WindIntensity * _WindSway * heightFactor;
+            sway += turb * _WindMagnitude * _WindIntensity * _WindSway * heightFactor * 3.0;
 
             worldPos.x += _WindDirectionX * sway;
             worldPos.z += _WindDirectionZ * sway;

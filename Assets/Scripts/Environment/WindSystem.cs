@@ -11,11 +11,11 @@ namespace InkRidge.Environment
     public class WindSystem : MonoBehaviour
     {
         [Header("Wind Properties")]
-        [SerializeField] private float _windSpeed = 1.5f;
-        [SerializeField] private float _windMagnitude = 0.15f;
-        [SerializeField] private float _windTurbulence = 1.5f;
+        [SerializeField] private float _windSpeed = 2.0f;
+        [SerializeField] private float _windMagnitude = 0.5f;
+        [SerializeField] private float _windTurbulence = 2.0f;
         [SerializeField] private Vector2 _windDirection = new Vector2(1f, 0.3f);
-        [SerializeField] private float _gustDensity = 0.6f;
+        [SerializeField] private float _gustDensity = 0.8f;
 
         [Header("Intensity")]
         [SerializeField] private float _targetIntensity = 1f;
