@@ -3,6 +3,7 @@ using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Locomotion;
 using UnityEngine.InputSystem.XR;
 using UnityEngine.XR.Interaction.Toolkit.Locomotion.Movement;
 using UnityEngine.XR.Interaction.Toolkit.Locomotion.Turning;
@@ -105,19 +106,7 @@ public class SceneSetup
         var xrOriginObj = CreateXROrigin();
         xrOriginObj.transform.position = new Vector3(0, 1.75f, 0);
 
-        // Add LocomotionController
-        var loco = xrOriginObj.AddComponent<LocomotionController>();
-        var moveProviderObj = new GameObject("ContinuousMoveProvider");
-        moveProviderObj.transform.SetParent(xrOriginObj.transform);
-        var moveProvider = moveProviderObj.AddComponent<ContinuousMoveProvider>();
-        var turnProviderObj = new GameObject("SnapTurnProvider");
-        turnProviderObj.transform.SetParent(xrOriginObj.transform);
-        var turnProvider = turnProviderObj.AddComponent<SnapTurnProvider>();
-
-        var locoSO = new SerializedObject(loco);
-        locoSO.FindProperty("_moveProvider").objectReferenceValue = moveProvider;
-        locoSO.FindProperty("_turnProvider").objectReferenceValue = turnProvider;
-        locoSO.ApplyModifiedProperties();
+        AddLocomotion(xrOriginObj);
 
         // Add MeditationPoint with trigger zone
         var meditationObj = new GameObject("MeditationPoint");
@@ -310,14 +299,24 @@ public class SceneSetup
 
     static void AddLocomotion(GameObject xrOriginObj)
     {
-        var loco = xrOriginObj.AddComponent<LocomotionController>();
+        // XRIT 3.x requires LocomotionMediator + XRBodyTransformer
+        var mediator = xrOriginObj.AddComponent<LocomotionMediator>();
+        var bodyTransformer = xrOriginObj.GetComponent<XRBodyTransformer>();
+        if (bodyTransformer == null)
+            bodyTransformer = xrOriginObj.AddComponent<XRBodyTransformer>();
+
         var moveProviderObj = new GameObject("ContinuousMoveProvider");
         moveProviderObj.transform.SetParent(xrOriginObj.transform);
         var moveProvider = moveProviderObj.AddComponent<ContinuousMoveProvider>();
+        moveProvider.mediator = mediator;
+
         var turnProviderObj = new GameObject("SnapTurnProvider");
         turnProviderObj.transform.SetParent(xrOriginObj.transform);
         var turnProvider = turnProviderObj.AddComponent<SnapTurnProvider>();
+        turnProvider.mediator = mediator;
 
+        // LocomotionController (our script) reads comfort settings
+        var loco = xrOriginObj.AddComponent<LocomotionController>();
         var locoSO = new SerializedObject(loco);
         locoSO.FindProperty("_moveProvider").objectReferenceValue = moveProvider;
         locoSO.FindProperty("_turnProvider").objectReferenceValue = turnProvider;
@@ -370,6 +369,7 @@ public class SceneSetup
     {
         var xrObj = new GameObject("XROrigin");
         var xrOrigin = xrObj.AddComponent<XROrigin>();
+        xrObj.AddComponent<XRBodyTransformer>();
 
         // Camera
         var camObj = new GameObject("MainCamera");

@@ -59,10 +59,12 @@
     <UnityVersion>2022.3.62t12</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="/Users/a1-6/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.3.1/Analyzers/Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll" />
     <Analyzer Include="/Applications/Tuanjie/Hub/Editor/2022.3.62t12/Tuanjie.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Editor/WindDebug.cs" />
     <Compile Include="Assets/Editor/SceneSetup.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -47,6 +47,8 @@ namespace InkRidge.Environment
             Shader.SetGlobalFloat(WindDirZId, dir.y);
             Shader.SetGlobalFloat(GustDensityId, _gustDensity);
             Shader.SetGlobalFloat(WindIntensityId, _currentIntensity);
+
+            Debug.Log($"[WindSystem] running: speed={_windSpeed} mag={_windMagnitude * _currentIntensity} intensity={_currentIntensity} dir=({dir.x:F1},{dir.y:F1})");
         }
 
         /// <summary>Smoothly set wind intensity (0 = calm, 1 = full wind).</summary>
