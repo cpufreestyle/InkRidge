@@ -25,7 +25,12 @@ EditorBuildSettings:
     guid: d4523669610154942b16278327d7f9a0
   m_BuildProfiles: []
   m_configObjects:
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: db8df7b63a5f949a0be7acdbc3f3f065, type: 2}
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 3de7f923bae894751a7e1672baa95497, type: 2}
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6d8eb3e281e714f9fb04ca02fc0c411d, type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 24e24fb4c0fef404da69e36915782289, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 73475c6b661684351bb5497ee71e7323, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 9c536404b06c142f89a14d697a313b9f, type: 2}
+    xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: bea6fa2a83f464bd9958657cccdeb231, type: 2}
   m_SlimFeaturesWeixinMiniGame:
     ACLDecompression: 0
     AllocateOverhead: 1

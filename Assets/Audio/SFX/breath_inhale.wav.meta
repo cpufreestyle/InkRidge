@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: DHxJtSupAi+LwuT0tnoN70s3TW7ywwSem8VM1TDHal/Vv8AyH1/PM58=
+guid: 41bfe0f0ba2b44270bf4f8da74129ca6
 AudioImporter:
   externalObjects: {}
   serializedVersion: 7
@@ -9,9 +9,9 @@ AudioImporter:
     sampleRateSetting: 0
     sampleRateOverride: 44100
     compressionFormat: 1
-    quality: 0.7
+    quality: 1
     conversionMode: 0
-    preloadAudioData: 1
+    preloadAudioData: 0
   platformSettingOverrides: {}
   forceToMono: 0
   normalize: 1
