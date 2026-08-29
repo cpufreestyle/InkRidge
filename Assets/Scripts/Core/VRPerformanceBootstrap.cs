@@ -31,9 +31,17 @@ namespace InkRidge.Core
             Performance.TrySetCPULevel(CpuLevel);
             Performance.TrySetGPULevel(GpuLevel);
 
-            if (Utils.SetFoveationLevel(FoveationLevel))
+            // TiledMultiRes (legacy FFR path) is unavailable on the Vulkan compositor,
+            // where foveation is controlled by the OVRPlugin runtime instead — the
+            // getter returns -1 there. Probe first to avoid the warning spam.
+            if (Utils.foveatedRenderingLevel >= 0)
             {
+                Utils.foveatedRenderingLevel = FoveationLevel;
                 Debug.Log("[VRPerf] FFR level " + FoveationLevel + " set");
+            }
+            else
+            {
+                Debug.Log("[VRPerf] Legacy FFR API unavailable (Vulkan runtime) — skipping");
             }
         }
     }
