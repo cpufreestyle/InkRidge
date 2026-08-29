@@ -148,7 +148,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 49534251}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1216b37352814ee0a330394cb6cdf8b, type: 3}
+  m_Script: {fileID: 11500000, guid: 4adf401db5be94d7c8a7bed3b76beb6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneName: Bamboo
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 622322450}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8fc2ed247112452a8b12fd4d36d6685, type: 3}
+  m_Script: {fileID: 11500000, guid: 66dc2445697b74c859d49dc6f632013a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _moveProvider: {fileID: 1974820274}
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 622322450}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fa7b4195685c3846be746c74f0ab2f8, type: 3}
+  m_Script: {fileID: 11500000, guid: dcace12ea093d412c81480071a79b6b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &622322453
@@ -762,7 +762,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1181703393}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18789c4c7cc98499caacb494477e5e58, type: 3}
+  m_Script: {fileID: 11500000, guid: ef4b9439f57814d8b90e30297c6a568d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneIndex: 4
@@ -966,7 +966,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1473676692}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b261fb148b8594b9c8e12f7658b69dff, type: 3}
+  m_Script: {fileID: 11500000, guid: 20f39919bdcb64c4a9521f35e4965619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _bambooSceneIndex: 1
@@ -1015,7 +1015,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1481907728}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a23686a77d6c24f009eb31a012e4b793, type: 3}
+  m_Script: {fileID: 11500000, guid: be8273224168b4dd7ae54f1f7c1e8527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!199 &1481907730
@@ -6029,7 +6029,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1824964608}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5db24328236ca4229aa113129f749b9c, type: 3}
+  m_Script: {fileID: 11500000, guid: 14e8a8820f2bd47a2a484be175bcd45c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _fadeCanvas: {fileID: 859914493}
@@ -6076,7 +6076,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1836269708}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95ce2b90679434edea89943700c3f58c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f5a01199a1a740ae8b4df36a694294a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _ambientSources:

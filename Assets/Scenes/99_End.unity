@@ -149,7 +149,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 430124179}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5beb91933a8494831bf0772f4ca98738, type: 3}
+  m_Script: {fileID: 11500000, guid: e82abe31a0329437c889f48f3d879a2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _walkTimeText: {fileID: 0}
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 622322450}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5db24328236ca4229aa113129f749b9c, type: 3}
+  m_Script: {fileID: 11500000, guid: 14e8a8820f2bd47a2a484be175bcd45c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _fadeCanvas: {fileID: 1573637439}
@@ -608,7 +608,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1974820273}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b261fb148b8594b9c8e12f7658b69dff, type: 3}
+  m_Script: {fileID: 11500000, guid: 20f39919bdcb64c4a9521f35e4965619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _bambooSceneIndex: 1

@@ -230,7 +230,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 405235574}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8fc2ed247112452a8b12fd4d36d6685, type: 3}
+  m_Script: {fileID: 11500000, guid: 66dc2445697b74c859d49dc6f632013a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _moveProvider: {fileID: 1710683384}
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 405235574}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fa7b4195685c3846be746c74f0ab2f8, type: 3}
+  m_Script: {fileID: 11500000, guid: dcace12ea093d412c81480071a79b6b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &405235577
@@ -528,7 +528,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 785642393}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b261fb148b8594b9c8e12f7658b69dff, type: 3}
+  m_Script: {fileID: 11500000, guid: 20f39919bdcb64c4a9521f35e4965619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _bambooSceneIndex: 1
@@ -576,7 +576,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 953841609}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18789c4c7cc98499caacb494477e5e58, type: 3}
+  m_Script: {fileID: 11500000, guid: ef4b9439f57814d8b90e30297c6a568d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneIndex: 1
@@ -1112,7 +1112,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1836269708}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95ce2b90679434edea89943700c3f58c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f5a01199a1a740ae8b4df36a694294a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _ambientSources:
@@ -1431,7 +1431,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1967889209}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5db24328236ca4229aa113129f749b9c, type: 3}
+  m_Script: {fileID: 11500000, guid: 14e8a8820f2bd47a2a484be175bcd45c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _fadeCanvas: {fileID: 659064876}
@@ -1478,7 +1478,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2057346423}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75e2af35527634eeaa52e71e8fcf03f2, type: 3}
+  m_Script: {fileID: 11500000, guid: 94d17e2d9173d41e7840759aba78449c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneName: Bamboo
@@ -1562,7 +1562,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2130480674}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a23686a77d6c24f009eb31a012e4b793, type: 3}
+  m_Script: {fileID: 11500000, guid: be8273224168b4dd7ae54f1f7c1e8527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!199 &2130480676
