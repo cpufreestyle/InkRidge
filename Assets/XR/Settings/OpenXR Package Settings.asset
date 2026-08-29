@@ -21,7 +21,7 @@ MonoBehaviour:
   - {fileID: -1870182370644154514}
   - {fileID: 4830481639010741320}
   - {fileID: 2322113943217895852}
-  - {fileID: 1080125261072587289}
+  - {fileID: 0}
   - {fileID: 8787503782584903608}
   - {fileID: 5777490182440772159}
   - {fileID: 2830407953513413393}
@@ -30,7 +30,7 @@ MonoBehaviour:
   - {fileID: -5289716611641734128}
   - {fileID: -7371594432007835460}
   - {fileID: 2337626109617827443}
-  - {fileID: 3529838632690821686}
+  - {fileID: 0}
   m_renderMode: 1
   m_autoColorSubmissionMode: 1
   m_colorSubmissionModes:
@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Name: PlayableAds
   m_EditorClassIdentifier: 
   features:
-  - {fileID: -1656369555429151671}
+  - {fileID: 0}
   m_renderMode: 1
   m_autoColorSubmissionMode: 1
   m_colorSubmissionModes:
@@ -332,7 +332,7 @@ MonoBehaviour:
   m_Name: OpenHarmony
   m_EditorClassIdentifier: 
   features:
-  - {fileID: -7398666025393399545}
+  - {fileID: 0}
   m_renderMode: 1
   m_autoColorSubmissionMode: 1
   m_colorSubmissionModes:
@@ -527,7 +527,7 @@ MonoBehaviour:
   - visibleName: Quest 3S
     manifestName: quest3s
     enabled: 1
-  forceRemoveInternetPermission: 0
+  forceRemoveInternetPermission: 1
   symmetricProjection: 0
   foveatedRenderingApi: 0
   systemSplashScreen: {fileID: 0}
@@ -590,7 +590,7 @@ MonoBehaviour:
   m_Name: MiniGame
   m_EditorClassIdentifier: 
   features:
-  - {fileID: -7009770440482740300}
+  - {fileID: 0}
   m_renderMode: 1
   m_autoColorSubmissionMode: 1
   m_colorSubmissionModes:
@@ -895,7 +895,7 @@ MonoBehaviour:
   m_Name: iOS
   m_EditorClassIdentifier: 
   features:
-  - {fileID: 62196875920952152}
+  - {fileID: 0}
   m_renderMode: 1
   m_autoColorSubmissionMode: 1
   m_colorSubmissionModes:
@@ -937,7 +937,7 @@ MonoBehaviour:
   m_Name: WebGL
   m_EditorClassIdentifier: 
   features:
-  - {fileID: -6377846705194523082}
+  - {fileID: 0}
   m_renderMode: 1
   m_autoColorSubmissionMode: 1
   m_colorSubmissionModes:

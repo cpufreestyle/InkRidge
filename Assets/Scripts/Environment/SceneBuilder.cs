@@ -3,6 +3,14 @@ using UnityEngine;
 namespace InkRidge.Environment
 {
     /// <summary>
+    /// Marks components whose MeshRenderer must be excluded from static batching
+    /// (e.g. meshes rebuilt or recolored every frame). StaticBatchingUtility bakes
+    /// the shared mesh into one combined mesh, so any later per-instance mesh
+    /// writes would be silently ignored.
+    /// </summary>
+    public interface IDynamicMeshRenderer { }
+
+    /// <summary>
     /// Builds scene geometry from primitives at runtime.
     /// Adapted from gongbi_prototype SceneBuilder.
     /// All objects use Gongbi/Toon material with GongbiColors palette.
@@ -87,20 +95,30 @@ namespace InkRidge.Environment
         }
 
         /// <summary>
-        /// Set a solid color skybox (ink-painting style: top darker, bottom lighter).
+        /// Ink-painting gradient skybox (Gongbi/InkSkybox) with drifting mist bands.
+        /// Also sets Trilight ambient so objects pick up sky/ground bounce light.
         /// </summary>
         protected void SetupSkybox(Color topColor, Color horizonColor)
         {
-            // Use a gradient material as skybox via a simple shader
-            var skyMat = new Material(Shader.Find("Skybox/Procedural"));
+            var skyMat = new Material(Shader.Find("Gongbi/InkSkybox"));
             if (skyMat != null)
             {
-                skyMat.SetColor("_SkyTint", topColor);
+                skyMat.SetColor("_ZenithColor", topColor);
                 skyMat.SetColor("_HorizonColor", horizonColor);
-                skyMat.SetFloat("_AtmosphereThickness", 0.5f);
-                skyMat.SetFloat("_SunSize", 0.0f);
+                skyMat.SetColor("_BottomColor", Color.Lerp(horizonColor, GongbiColors.InkOutline, 0.45f));
+                skyMat.SetColor("_CloudColor", Color.Lerp(horizonColor, GongbiColors.InkOutline, 0.22f));
+                skyMat.SetFloat("_CloudCoverage", 0.45f);
+                skyMat.SetFloat("_CloudSpeed", 0.012f);
+                skyMat.SetFloat("_GrainAmount", 0.02f);
                 RenderSettings.skybox = skyMat;
             }
+
+            // Trilight ambient: sky from zenith, ground bounce from ink earth.
+            RenderSettings.ambientMode = UnityEngine.Rendering.AmbientMode.Trilight;
+            RenderSettings.ambientSkyColor = Color.Lerp(topColor, Color.white, 0.25f);
+            RenderSettings.ambientEquatorColor = horizonColor;
+            RenderSettings.ambientGroundColor = Color.Lerp(GongbiColors.DarkEarth, horizonColor, 0.3f);
+            RenderSettings.ambientIntensity = 1.15f;
         }
 
         protected void SetupFog(Color fogColor, float density)
@@ -109,8 +127,6 @@ namespace InkRidge.Environment
             RenderSettings.fogMode = FogMode.Exponential;
             RenderSettings.fogColor = fogColor;
             RenderSettings.fogDensity = density;
-            RenderSettings.ambientLight = GongbiColors.WarmAmbient;
-            RenderSettings.ambientIntensity = 1.2f;
         }
 
         protected void SetupLighting(Color lightColor, Vector3 lightDir,
@@ -123,14 +139,29 @@ namespace InkRidge.Environment
             light.type = LightType.Directional;
             light.color = lightColor;
             light.intensity = intensity;
-            light.shadows = LightShadows.Soft;
-            light.shadowBias = 0.001f;
-            light.shadowNormalBias = 0.4f;
+            // VR mobile: real-time shadows cost a full extra geometry pass per eye.
+            // The toon look does not depend on shadow maps (cel bands + ink outline).
+            light.shadows = LightShadows.None;
         }
 
         protected virtual void Start()
         {
             Build();
+            // Runtime-generated primitives cannot be pre-batched in the editor,
+            // so merge them once here: one draw call per material (+ outline pass)
+            // instead of one per renderer. Renderers flagged IDynamicMeshRenderer
+            // are skipped; particle systems are not MeshRenderers and are unaffected.
+            if (_root != null)
+            {
+                var statics = new System.Collections.Generic.List<GameObject>();
+                foreach (var r in _root.GetComponentsInChildren<MeshRenderer>())
+                {
+                    if (r.GetComponentInParent<IDynamicMeshRenderer>() == null)
+                        statics.Add(r.gameObject);
+                }
+                if (statics.Count > 0)
+                    StaticBatchingUtility.Combine(statics.ToArray(), _root);
+            }
         }
     }
 }

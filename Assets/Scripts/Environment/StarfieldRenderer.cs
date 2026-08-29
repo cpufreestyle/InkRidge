@@ -8,7 +8,7 @@ namespace InkRidge.Environment
     /// Generates stars on a sphere with optional constellations, twinkling, and color variation.
     /// </summary>
     [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
-    public class StarfieldRenderer : MonoBehaviour
+    public class StarfieldRenderer : MonoBehaviour, IDynamicMeshRenderer
     {
         [Header("Star Layout")]
         [SerializeField] private int _starCount = 600;

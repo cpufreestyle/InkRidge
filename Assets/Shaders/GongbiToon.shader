@@ -13,6 +13,12 @@ Shader "Gongbi/Toon"
         _ShadowIntensity ("Shadow Intensity", Range(0.0, 1.0)) = 0.55
         _LightTint ("Light Tint Influence", Range(0.0, 1.0)) = 0.25
         _WindSway ("Wind Sway Amount", Range(0.0, 1.0)) = 0.0
+        _InkWash ("Base Ink Wash", Range(0.0, 0.5)) = 0.15
+        _ColorJitter ("Per-Instance Color Jitter", Range(0.0, 0.3)) = 0.06
+        _PaperGrain ("Paper Grain", Range(0.0, 0.1)) = 0.02
+        _RimColor ("Rim Light Color", Color) = (1.0, 0.96, 0.88, 1)
+        _RimIntensity ("Rim Intensity", Range(0.0, 1.0)) = 0.18
+        _RimPower ("Rim Power", Range(1.0, 8.0)) = 3.0
     }
 
     SubShader
@@ -103,6 +109,12 @@ Shader "Gongbi/Toon"
         float  _ShadowIntensity;
         float  _LightTint;
         float  _WindSway;
+        float  _InkWash;
+        float  _ColorJitter;
+        float  _PaperGrain;
+        fixed4 _RimColor;
+        float  _RimIntensity;
+        float  _RimPower;
 
         // Global wind params
         float _WindSpeed;
@@ -129,8 +141,12 @@ Shader "Gongbi/Toon"
             half NdotH = max(dot(s.Normal, halfVec), 0);
             half spec = step(0.5, pow(NdotH, _ToonSpecPower));
 
+            // Soft rim backlight — paper-glow on silhouettes, reads as 背光宣纸.
+            half rim = pow(1.0 - saturate(dot(s.Normal, viewDir)), _RimPower);
+
             half3 baseColor = lerp(_ShadowColor.rgb, _MainColor.rgb, cel);
             baseColor += spec * _ToonSpecColor.rgb * 0.35;
+            baseColor += rim * _RimColor.rgb * _RimIntensity;
 
             baseColor *= lerp(fixed3(1,1,1), _LightColor0.rgb, _LightTint) * (atten * 2);
 
@@ -140,7 +156,14 @@ Shader "Gongbi/Toon"
         struct Input
         {
             float2 uv_MainTex;
+            float3 worldPos;
         };
+
+        // Cheap stable hash — baked into the combined mesh so batching keeps it.
+        float hashW(float3 p)
+        {
+            return frac(sin(dot(p, float3(127.1, 311.7, 74.7))) * 43758.5453);
+        }
 
         void vert(inout appdata_full v)
         {
@@ -161,7 +184,21 @@ Shader "Gongbi/Toon"
 
         void surf(Input IN, inout SurfaceOutput o)
         {
-            o.Albedo = _MainColor.rgb;
+            float3 albedo = _MainColor.rgb;
+
+            // Per-instance pigment variation — hash of world position breaks the
+            // uniform clone look without breaking static batching (baked into mesh).
+            float jitter = (hashW(floor(IN.worldPos * 2.0)) - 0.5) * _ColorJitter;
+            albedo *= 1.0 + jitter;
+
+            // Ink-wash pooling: pigment sinks toward the base (ink painting cue).
+            float inkT = saturate((1.5 - IN.worldPos.y) / 1.5);
+            albedo *= lerp(1.0, 0.72, inkT * _InkWash * 2.0);
+
+            // Paper grain — high-frequency luminance noise, silk/宣纸 texture cue.
+            albedo += (hashW(floor(IN.worldPos * 14.0)) - 0.5) * _PaperGrain;
+
+            o.Albedo = albedo;
             o.Alpha = _MainColor.a;
         }
         ENDCG
