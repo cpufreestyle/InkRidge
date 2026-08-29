@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using InkRidge.Core;
 
 namespace InkRidge.UI
@@ -8,15 +9,18 @@ namespace InkRidge.UI
     /// StartGame() existed but nothing called it, leaving the player staring
     /// at a stone stele with no way to enter the game.
     /// This component shows an in-VR prompt above the stele and starts the
-    /// game via gaze confirmation (look at the stele for 3 seconds) or any
-    /// controller button press. Canvas is built at runtime to match the
-    /// project's runtime-generated-UI approach (no editor-authored prefab).
+    /// game via gaze confirmation (look toward the stele for 3 seconds) or
+    /// any controller button press, with an idle auto-start fallback.
+    /// Canvas is built at runtime to match the project's runtime-generated-UI
+    /// approach (no editor-authored prefab).
     /// </summary>
     public class StartGate : MonoBehaviour
     {
         [Header("Config")]
         [SerializeField] private Transform _gazeTarget;   // the stone stele
         [SerializeField] private float _gazeHoldSeconds = 3f;
+        [SerializeField] private float _gazeAngle = 25f;  // generous: stele sits below eye line
+        [SerializeField] private float _idleAutoStartSeconds = 12f;
         [SerializeField] private float _promptDistance = 3.2f;
         [SerializeField] private float _promptHeight = 2.3f;
 
@@ -24,6 +28,7 @@ namespace InkRidge.UI
         private Canvas _canvas;
         private UnityEngine.UI.Text _text;
         private float _gazeTimer;
+        private float _idleTimer;
         private bool _started;
 
         void Start()
@@ -41,19 +46,39 @@ namespace InkRidge.UI
         {
             if (_started || _mainCamera == null) return;
 
+            _idleTimer += Time.deltaTime;
+            if (_idleTimer >= _idleAutoStartSeconds)
+            {
+                BeginGame();
+                return;
+            }
+
             bool gazing = false;
             if (_gazeTarget != null)
             {
-                var toTarget = _gazeTarget.position - _mainCamera.transform.position;
-                gazing = Vector3.Angle(_mainCamera.transform.forward, toTarget) < 15f;
+                // Aim at the top of the stele — its center is below eye level,
+                // so looking slightly down at the readable part counts.
+                var targetPos = _gazeTarget.position + Vector3.up * (_gazeTarget.localScale.y * 0.5f);
+                var toTarget = targetPos - _mainCamera.transform.position;
+                gazing = Vector3.Angle(_mainCamera.transform.forward, toTarget) < _gazeAngle;
             }
 
-            bool buttonPressed =
-                Input.GetKeyDown(KeyCode.JoystickButton0) ||
-                Input.GetKeyDown(KeyCode.JoystickButton1) ||
-                Input.GetKeyDown(KeyCode.JoystickButton2) ||
-                Input.GetKeyDown(KeyCode.JoystickButton3) ||
-                Input.GetKeyDown(KeyCode.Return);
+            // Input System only project (activeInputHandler=2): legacy
+            // Input.GetKeyDown never fires. Poll common VR controller buttons.
+            bool buttonPressed = false;
+            if (Gamepad.current != null)
+            {
+                var gp = Gamepad.current;
+                buttonPressed =
+                    gp.buttonSouth.wasPressedThisFrame ||
+                    gp.buttonNorth.wasPressedThisFrame ||
+                    gp.buttonEast.wasPressedThisFrame ||
+                    gp.buttonWest.wasPressedThisFrame ||
+                    gp.startButton.wasPressedThisFrame ||
+                    gp.selectButton.wasPressedThisFrame ||
+                    gp.rightTrigger.wasPressedThisFrame ||
+                    gp.leftTrigger.wasPressedThisFrame;
+            }
 
             if (buttonPressed)
             {
@@ -74,7 +99,6 @@ namespace InkRidge.UI
                 UpdatePrompt(_gazeTimer / _gazeHoldSeconds);
             }
         }
-
         void BeginGame()
         {
             if (_started) return;
@@ -112,7 +136,7 @@ namespace InkRidge.UI
             // Title
             _text = CreateText("Title", rt.sizeDelta - new Vector2(20f, 20f));
             // LegacyRuntime.ttf has no CJK glyphs; fall back to English text.
-            _text.text = "INK RIDGE\nGaze at the stele or press any button to begin";
+            _text.text = "INK RIDGE\nLook at the stele or press any button\n(auto-start in a moment)";
             _text.fontSize = 22;
 
             // Progress bar (fades in while gazing)
