@@ -27,9 +27,21 @@ namespace InkRidge.Environment
             _root = new GameObject($"__Scene_{_sceneName}");
         }
 
+        private static Shader _gongbiShader;
+
+        private static Shader GongbiShader
+        {
+            get
+            {
+                if (_gongbiShader == null)
+                    _gongbiShader = Shader.Find("Gongbi/Toon");
+                return _gongbiShader;
+            }
+        }
+
         protected Material MakeMat(Color mainColor, float outlineWidth = 0.012f)
         {
-            var mat = new Material(Shader.Find("Gongbi/Toon"));
+            var mat = new Material(GongbiShader);
             mat.SetColor("_MainColor", mainColor);
             mat.SetColor("_ShadowColor", GongbiColors.Shadow(mainColor));
             mat.SetColor("_OutlineColor", GongbiColors.InkOutline);

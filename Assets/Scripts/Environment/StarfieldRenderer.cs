@@ -30,21 +30,33 @@ namespace InkRidge.Environment
         private Vector3[] _vertices;
         private Color[] _colors;
         private float[] _phase;
+        private float[] _baseAlpha;
 
         void Start()
         {
             GenerateStars();
         }
 
+        // Twinkle speed is ~2 rad/s; updating the color buffer at display rate
+        // (72 Hz in VR) is wasted CPU/VBO bandwidth. 12-15 Hz is visually identical.
+        private const int TwinkleUpdateInterval = 5;
+        private int _twinkleFrame;
+
         void Update()
         {
             if (_twinkle && _mesh != null)
             {
+                _twinkleFrame++;
+                if (_twinkleFrame % TwinkleUpdateInterval != 0) return;
+
                 float time = Time.time;
                 for (int i = 0; i < _colors.Length; i++)
                 {
+                    // Compute alpha from the stored base brightness instead of
+                    // accumulating on the previous value (the old running sum
+                    // drifted into the Clamp01 bounds and erased star variation).
                     float twinkle = Mathf.Sin(time * _twinkleSpeed + _phase[i]) * _twinkleAmount;
-                    _colors[i].a = Mathf.Clamp01(_colors[i].a + twinkle);
+                    _colors[i].a = Mathf.Clamp01(_baseAlpha[i] + twinkle);
                 }
                 _mesh.colors = _colors;
             }
@@ -56,6 +68,7 @@ namespace InkRidge.Environment
             _vertices = new Vector3[_starCount];
             _colors = new Color[_starCount];
             _phase = new float[_starCount];
+            _baseAlpha = new float[_starCount];
 
             for (int i = 0; i < _starCount; i++)
             {
@@ -73,6 +86,7 @@ namespace InkRidge.Environment
 
                 // Brightness variation
                 float brightness = Random.Range(_minBrightness, _maxBrightness);
+                _baseAlpha[i] = brightness;
 
                 // Color: mostly white-blue, some warm
                 Color baseCol = Random.value < _warmStarRatio ? _warmStarColor : _starColor;

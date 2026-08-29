@@ -113,6 +113,7 @@ namespace InkRidge.Environment
             var farMat = MakeMat(new Color(0.08f, 0.10f, 0.15f), 0.004f);
             var midMat = MakeMat(new Color(0.12f, 0.14f, 0.20f), 0.005f);
             var snowMountainMat = MakeMat(new Color(0.40f, 0.42f, 0.48f), 0.004f);
+            var snowMat = MakeMat(new Color(0.75f, 0.78f, 0.82f), 0.003f);
 
             for (int i = 0; i < 8; i++)
             {
@@ -129,7 +130,6 @@ namespace InkRidge.Environment
                 // Snow cap on taller mountains
                 if (h > 12f)
                 {
-                    var snowMat = MakeMat(new Color(0.75f, 0.78f, 0.82f), 0.003f);
                     Sphere($"MountainSnow_{i}", new Vector3(x, h - 1f, z),
                         new Vector3(w * 0.3f, h * 0.15f, 1f), snowMat);
                 }
