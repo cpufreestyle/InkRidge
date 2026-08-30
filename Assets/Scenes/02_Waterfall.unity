@@ -290,6 +290,7 @@ GameObject:
   - component: {fileID: 622322453}
   - component: {fileID: 622322452}
   - component: {fileID: 622322451}
+  - component: {fileID: 622322456}
   m_Layer: 0
   m_Name: XROrigin
   m_TagString: Untagged
@@ -326,6 +327,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcace12ea093d412c81480071a79b6b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxIntensity: 0.4
+  _fadeSpeed: 3
 --- !u!114 &622322453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,6 +381,57 @@ Transform:
   - {fileID: 1573637440}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &622322456
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622322450}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
 --- !u!1 &677329190
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,11 +827,18 @@ MonoBehaviour:
   _sceneName: Waterfall
   _pattern: 1
   _sessionDuration: 180
-  _breathCircleTransform: {fileID: 0}
+  _gazeHoldSeconds: 3
+  _exitHoldSeconds: 1.5
+  _exitFeedbackInterval: 0.25
   _breathCircleRenderer: {fileID: 430124180}
   _particles: {fileID: 1481907729}
-  _breathAudioSource: {fileID: 0}
+  _haptics: {fileID: 0}
+  _breathAudio: {fileID: 0}
+  _sceneReactive: {fileID: 0}
+  _breathFilter: {fileID: 0}
   _ambientAudioSource: {fileID: 0}
+  _meditationAmbientVolume: 0.18
+  _duckFadeSeconds: 1.5
 --- !u!65 &1181703395
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -814,6 +875,65 @@ Transform:
   m_Children:
   - {fileID: 430124183}
   - {fileID: 1481907732}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1288283967
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1288283969}
+  - component: {fileID: 1288283968}
+  m_Layer: 0
+  m_Name: __Scene_BreathReactive
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1288283968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288283967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f63d307125b284e6fb77683e81360942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wind: {fileID: 0}
+  _gatherIntensity: 1.35
+  _releaseIntensity: 0.45
+  _responseSpeed: 3
+  _breathLights: []
+  _lightDim: 0.55
+  _lightGlow: 1.45
+  _affectFog: 0
+  _fogThin: 0.012
+  _fogThick: 0.03
+  _fogIdle: 0.02
+  _glowRenderers: []
+  _glowColorProp: _MainColor
+  _glowDim: 0.7
+  _glowGlow: 1.3
+--- !u!4 &1288283969
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288283967}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1431787581
@@ -5957,7 +6077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9f365cf844c03449bc8973eead2c3c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Mediator: {fileID: 622322452}
+  m_Mediator: {fileID: 0}
   m_TransformationPriority: 0
   m_TurnAmount: 45
   m_DebounceTime: 0.5
@@ -6296,7 +6416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 626a4d6723d6ad24b9aebb811ad5a3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Mediator: {fileID: 622322452}
+  m_Mediator: {fileID: 0}
   m_TransformationPriority: 0
   m_MoveSpeed: 1
   m_EnableStrafe: 1
@@ -6388,3 +6508,4 @@ SceneRoots:
   - {fileID: 622322455}
   - {fileID: 1181703396}
   - {fileID: 1836269710}
+  - {fileID: 1288283969}
