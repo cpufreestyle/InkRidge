@@ -1,6 +1,6 @@
 schema_version: 1
 module_path: ""
-title: InkRidge 墨岭 VR 冥想游戏项目根
+title: InkRidge Unity/Tuanjie 工程根与构建配置
 scope:
     - .gitignore
     - AGENTS.md

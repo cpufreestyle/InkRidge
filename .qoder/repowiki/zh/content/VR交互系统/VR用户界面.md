@@ -14,6 +14,13 @@
 - [OptimizeProject.cs](file://Assets/Editor/OptimizeProject.cs)
 </cite>
 
+## 更新摘要
+**所做更改**
+- 更新了StartGate启动门控系统部分，详细说明了WorldSpace画布缩放问题的修复
+- 添加了关于UI尺寸优化的技术细节，从320米墙缩小到舒适的1.6m×0.6m尺寸
+- 增强了UI组件设计原则章节，包含响应式设计和用户体验优化
+- 更新了故障排查指南，包含UI缩放相关问题的解决方案
+
 ## 目录
 1. [简介](#简介)
 2. [项目结构](#项目结构)
@@ -80,7 +87,7 @@ J -.-> I
 
 **图表来源**
 - [XRMenu.cs:1-172](file://Assets/Scripts/UI/XRMenu.cs#L1-L172)
-- [StartGate.cs:1-191](file://Assets/Scripts/UI/StartGate.cs#L1-L191)
+- [StartGate.cs:1-197](file://Assets/Scripts/UI/StartGate.cs#L1-L197)
 - [SummaryScreen.cs:1-72](file://Assets/Scripts/UI/SummaryScreen.cs#L1-L72)
 - [ComfortSettings.cs:1-81](file://Assets/Scripts/Core/ComfortSettings.cs#L1-L81)
 - [GameManager.cs:1-66](file://Assets/Scripts/Core/GameManager.cs#L1-L66)
@@ -92,7 +99,7 @@ J -.-> I
 
 **章节来源**
 - [XRMenu.cs:1-172](file://Assets/Scripts/UI/XRMenu.cs#L1-L172)
-- [StartGate.cs:1-191](file://Assets/Scripts/UI/StartGate.cs#L1-L191)
+- [StartGate.cs:1-197](file://Assets/Scripts/UI/StartGate.cs#L1-L197)
 - [SummaryScreen.cs:1-72](file://Assets/Scripts/UI/SummaryScreen.cs#L1-L72)
 - [ComfortSettings.cs:1-81](file://Assets/Scripts/Core/ComfortSettings.cs#L1-L81)
 - [GameManager.cs:1-66](file://Assets/Scripts/Core/GameManager.cs#L1-L66)
@@ -116,7 +123,7 @@ J -.-> I
 
 **章节来源**
 - [XRMenu.cs:1-172](file://Assets/Scripts/UI/XRMenu.cs#L1-L172)
-- [StartGate.cs:1-191](file://Assets/Scripts/UI/StartGate.cs#L1-L191)
+- [StartGate.cs:1-197](file://Assets/Scripts/UI/StartGate.cs#L1-L197)
 - [SummaryScreen.cs:1-72](file://Assets/Scripts/UI/SummaryScreen.cs#L1-L72)
 - [ComfortSettings.cs:1-81](file://Assets/Scripts/Core/ComfortSettings.cs#L1-L81)
 - [GameManager.cs:1-66](file://Assets/Scripts/Core/GameManager.cs#L1-L66)
@@ -127,7 +134,7 @@ J -.-> I
 - [OptimizeProject.cs:1-335](file://Assets/Editor/OptimizeProject.cs#L1-L335)
 
 ## 架构总览
-VR UI系统以“门控—游玩—总结”为主线，结合设置面板与数据持久化，形成闭环体验。
+VR UI系统以"门控—游玩—总结"为主线，结合设置面板与数据持久化，形成闭环体验。
 
 ```mermaid
 sequenceDiagram
@@ -149,7 +156,7 @@ SS-->>U : "展示时长/循环/稳定度/累计"
 ```
 
 **图表来源**
-- [StartGate.cs:1-191](file://Assets/Scripts/UI/StartGate.cs#L1-L191)
+- [StartGate.cs:1-197](file://Assets/Scripts/UI/StartGate.cs#L1-L197)
 - [GameManager.cs:1-66](file://Assets/Scripts/Core/GameManager.cs#L1-L66)
 - [SceneTransition.cs:1-61](file://Assets/Scripts/Core/SceneTransition.cs#L1-L61)
 - [SummaryScreen.cs:1-72](file://Assets/Scripts/UI/SummaryScreen.cs#L1-L72)
@@ -193,6 +200,7 @@ Hide --> End
 ### StartGate启动门控系统
 - 设计要点
   - 运行时构建WorldSpace Canvas提示UI，包含背景、标题文本与进度条
+  - **已修复严重UI缩放问题**：将WorldSpace画布从320米墙缩小到舒适的1.6m×0.6m尺寸，解决"只能看到世界一角"的问题
   - 支持三种进入方式：注视目标（角度阈值与持续时间）、任意按键触发、空闲自动开始
   - 完成后调用GameManager.StartGame进入主场景
 - 交互流程
@@ -201,6 +209,11 @@ Hide --> End
   - 若检测到任意按键按下，立即开始
 - 过渡动画
   - 通过GameManager调用SceneTransition.LoadScene进行异步加载与黑场过渡
+- **UI缩放修复详情**
+  - 原问题：320-unit面板相当于320米墙壁，用户站在其中只能看到一小部分世界
+  - 解决方案：保持屏幕风格尺寸（320×120），但将整个画布缩放到物理尺寸约1.6m×0.6m
+  - 实现方式：设置`canvasObj.transform.localScale = new Vector3(0.005f, 0.005f, 0.005f)`
+  - 位置调整：画布位于玩家前方3.2米处，高度2.3米，符合舒适阅读距离
 
 ```mermaid
 sequenceDiagram
@@ -227,7 +240,7 @@ ST-->>ST : "黑场淡入淡出"
 - [SceneTransition.cs:30-44](file://Assets/Scripts/Core/SceneTransition.cs#L30-L44)
 
 **章节来源**
-- [StartGate.cs:1-191](file://Assets/Scripts/UI/StartGate.cs#L1-L191)
+- [StartGate.cs:1-197](file://Assets/Scripts/UI/StartGate.cs#L1-L197)
 - [GameManager.cs:1-66](file://Assets/Scripts/Core/GameManager.cs#L1-L66)
 - [SceneTransition.cs:1-61](file://Assets/Scripts/Core/SceneTransition.cs#L1-L61)
 
@@ -238,7 +251,7 @@ ST-->>ST : "黑场淡入淡出"
   - 提供重启按钮，返回起始场景
 - 数据流
   - Load保存数据，遍历最近记录累加时长与稳定度，计算平均值
-  - 格式化时间为“分秒”格式
+  - 格式化时间为"分秒"格式
   - 重启按钮调用SceneTransition.LoadScene回到起始场景
 
 ```mermaid
@@ -289,7 +302,7 @@ OP["OptimizeProject"] --> VB
 
 **图表来源**
 - [XRMenu.cs:1-172](file://Assets/Scripts/UI/XRMenu.cs#L1-L172)
-- [StartGate.cs:1-191](file://Assets/Scripts/UI/StartGate.cs#L1-L191)
+- [StartGate.cs:1-197](file://Assets/Scripts/UI/StartGate.cs#L1-L197)
 - [SummaryScreen.cs:1-72](file://Assets/Scripts/UI/SummaryScreen.cs#L1-L72)
 - [ComfortSettings.cs:1-81](file://Assets/Scripts/Core/ComfortSettings.cs#L1-L81)
 - [GameManager.cs:1-66](file://Assets/Scripts/Core/GameManager.cs#L1-L66)
@@ -301,7 +314,7 @@ OP["OptimizeProject"] --> VB
 
 **章节来源**
 - [XRMenu.cs:1-172](file://Assets/Scripts/UI/XRMenu.cs#L1-L172)
-- [StartGate.cs:1-191](file://Assets/Scripts/UI/StartGate.cs#L1-L191)
+- [StartGate.cs:1-197](file://Assets/Scripts/UI/StartGate.cs#L1-L197)
 - [SummaryScreen.cs:1-72](file://Assets/Scripts/UI/SummaryScreen.cs#L1-L72)
 - [ComfortSettings.cs:1-81](file://Assets/Scripts/Core/ComfortSettings.cs#L1-L81)
 - [GameManager.cs:1-66](file://Assets/Scripts/Core/GameManager.cs#L1-L66)
@@ -321,6 +334,7 @@ OP["OptimizeProject"] --> VB
   - 注视交互宽容角度与时长，兼顾不同身高与佩戴位置
   - 设置面板提供常用舒适度调节（移动速度、转向角度、晕影、坐姿模式、触觉反馈），适配不同用户偏好
   - 文本与UI布局采用世界空间Canvas，便于在不同分辨率与视距下阅读
+  - **UI缩放优化**：StartGate面板采用合理的物理尺寸（1.6m×0.6m），确保用户在舒适距离内阅读，避免过大或过小的显示问题
 - 跨平台兼容性
   - Quest专用性能API探测与回退，避免Vulkan运行时警告
   - 编辑器脚本针对Android目标与IL2CPP Release配置，保证构建一致性
@@ -330,7 +344,7 @@ OP["OptimizeProject"] --> VB
 - [VRPerformanceBootstrap.cs:1-49](file://Assets/Scripts/Core/VRPerformanceBootstrap.cs#L1-L49)
 - [OptimizeProject.cs:1-335](file://Assets/Editor/OptimizeProject.cs#L1-L335)
 - [XRMenu.cs:1-172](file://Assets/Scripts/UI/XRMenu.cs#L1-L172)
-- [StartGate.cs:1-191](file://Assets/Scripts/UI/StartGate.cs#L1-L191)
+- [StartGate.cs:1-197](file://Assets/Scripts/UI/StartGate.cs#L1-L197)
 
 ## 故障排查指南
 - 设置面板不可交互
@@ -345,6 +359,11 @@ OP["OptimizeProject"] --> VB
   - 现象：注视或按键无效
   - 原因：Camera.main为空或gazeTarget未正确设置
   - 解决：确保场景中存在主相机且gazeTarget指向石碑；检查Input System配置
+- **UI缩放问题**
+  - 现象：StartGate面板显示过大或过小，用户需要极端视角才能看到完整内容
+  - 原因：WorldSpace画布尺寸设置不当，如320米墙导致用户只能看到一小部分
+  - 解决：使用适当的缩放比例（0.005f）将320×120像素的画布转换为1.6m×0.6m的物理尺寸
+  - 验证：确保画布位于玩家前方3.2米，高度2.3米的舒适阅读位置
 - 统计数据显示异常
   - 现象：SummaryScreen数值不正确
   - 原因：SaveManager读取失败或BreathData解析异常
@@ -356,14 +375,14 @@ OP["OptimizeProject"] --> VB
 
 **章节来源**
 - [XRMenu.cs:1-172](file://Assets/Scripts/UI/XRMenu.cs#L1-L172)
-- [StartGate.cs:1-191](file://Assets/Scripts/UI/StartGate.cs#L1-L191)
+- [StartGate.cs:1-197](file://Assets/Scripts/UI/StartGate.cs#L1-L197)
 - [SummaryScreen.cs:1-72](file://Assets/Scripts/UI/SummaryScreen.cs#L1-L72)
 - [SaveManager.cs:1-118](file://Assets/Scripts/Data/SaveManager.cs#L1-L118)
 - [VRPerformanceBootstrap.cs:1-49](file://Assets/Scripts/Core/VRPerformanceBootstrap.cs#L1-L49)
 - [OptimizeProject.cs:1-335](file://Assets/Editor/OptimizeProject.cs#L1-L335)
 
 ## 结论
-InkRidge的VR UI系统以简洁清晰的门控—游玩—总结流程为核心，结合灵活的设置面板与稳健的数据持久化，提供了良好的用户体验。通过运行时性能调优与编辑器一键优化，系统在Quest平台上具备稳定的帧率与流畅的交互。未来可在交互层增强（如射线交互）与主题定制方面进一步扩展。
+InkRidge的VR UI系统以简洁清晰的门控—游玩—总结流程为核心，结合灵活的设置面板与稳健的数据持久化，提供了良好的用户体验。通过运行时性能调优与编辑器一键优化，系统在Quest平台上具备稳定的帧率与流畅的交互。**特别值得注意的是，StartGate面板的UI缩放问题已得到修复，从320米墙的极端尺寸调整为舒适的1.6m×0.6m物理尺寸，显著改善了用户的视觉体验和交互便利性**。未来可在交互层增强（如射线交互）与主题定制方面进一步扩展。
 
 ## 附录：扩展与主题定制
 - 新增菜单项
@@ -377,6 +396,10 @@ InkRidge的VR UI系统以简洁清晰的门控—游玩—总结流程为核心�
 - 图表渲染建议
   - SummaryScreen当前以文本形式展示统计；如需图表，建议使用轻量级UI图表库或自定义绘制
   - 保持图表可读性与低开销，避免在VR中频繁重绘
+- **UI尺寸设计原则**
+  - WorldSpace画布应采用物理尺寸而非像素尺寸，推荐使用0.005f缩放比例将屏幕风格尺寸转换为合适的物理大小
+  - 确保UI元素位于用户舒适阅读距离（2-4米），高度适中（1.5-2.5米）
+  - 避免过大的UI面板导致用户需要极端头部运动才能看到全部内容
 - 性能与兼容性
   - 新增UI元素时注意Draw Call与Overdraw，尽量复用材质与纹理
   - 测试不同头显与分辨率下的显示效果，确保可读性与可用性
@@ -384,7 +407,7 @@ InkRidge的VR UI系统以简洁清晰的门控—游玩—总结流程为核心�
 
 **章节来源**
 - [XRMenu.cs:1-172](file://Assets/Scripts/UI/XRMenu.cs#L1-L172)
-- [StartGate.cs:1-191](file://Assets/Scripts/UI/StartGate.cs#L1-L191)
+- [StartGate.cs:1-197](file://Assets/Scripts/UI/StartGate.cs#L1-L197)
 - [SummaryScreen.cs:1-72](file://Assets/Scripts/UI/SummaryScreen.cs#L1-L72)
 - [ComfortSettings.cs:1-81](file://Assets/Scripts/Core/ComfortSettings.cs#L1-L81)
 - [OptimizeProject.cs:1-335](file://Assets/Editor/OptimizeProject.cs#L1-L335)
