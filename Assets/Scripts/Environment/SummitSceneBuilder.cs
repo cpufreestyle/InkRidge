@@ -90,20 +90,20 @@ namespace InkRidge.Environment
             starMR.material = starMat;
             starObj.AddComponent<StarfieldRenderer>();
 
-            // Moon — larger with glow layers
+            // Moon — larger with glow layers. Skybox furniture: never collidable.
             var moonMat = MakeMat(new Color(0.95f, 0.93f, 0.85f), 0.003f);
-            Sphere("Moon", new Vector3(-15f, 20f, -25f),
+            DecorSphere("Moon", new Vector3(-15f, 20f, -25f),
                 new Vector3(3f, 3f, 3f), moonMat);
             var glowMat = MakeMat(new Color(0.80f, 0.80f, 0.70f, 0.3f), 0.001f);
-            Sphere("MoonGlow", new Vector3(-15f, 20f, -25f),
+            DecorSphere("MoonGlow", new Vector3(-15f, 20f, -25f),
                 new Vector3(5f, 5f, 5f), glowMat);
             var glow2Mat = MakeMat(new Color(0.70f, 0.70f, 0.60f, 0.15f), 0.001f);
-            Sphere("MoonGlow2", new Vector3(-15f, 20f, -25f),
+            DecorSphere("MoonGlow2", new Vector3(-15f, 20f, -25f),
                 new Vector3(8f, 8f, 8f), glow2Mat);
 
             // Shooting star trail (static visual)
             var trailMat = MakeMat(new Color(0.9f, 0.9f, 1f, 0.5f), 0.001f);
-            var trail = Cube("ShootingStar", new Vector3(10f, 25f, -15f),
+            var trail = DecorCube("ShootingStar", new Vector3(10f, 25f, -15f),
                 new Vector3(3f, 0.05f, 0.05f), trailMat);
             trail.transform.rotation = Quaternion.Euler(0, 0, -20f);
         }
@@ -124,13 +124,15 @@ namespace InkRidge.Environment
                 float h = 8f + i * 2.5f;
                 float w = 12f + i * 2f;
                 var mat = i % 3 == 0 ? snowMountainMat : (i % 2 == 0 ? farMat : midMat);
-                // Mountain shape: wide base, pointed top
-                Cube($"FarMountain_{i}", new Vector3(x, h / 2f, z),
+                // Mountain shape: wide base, pointed top. These are 35–63 m out
+                // (the play area is bounded at ±7 m) and up to 28 m tall — as
+                // colliders they were by far the largest AABBs in the scene.
+                DecorCube($"FarMountain_{i}", new Vector3(x, h / 2f, z),
                     new Vector3(w, h, 3f), mat);
                 // Snow cap on taller mountains
                 if (h > 12f)
                 {
-                    Sphere($"MountainSnow_{i}", new Vector3(x, h - 1f, z),
+                    DecorSphere($"MountainSnow_{i}", new Vector3(x, h - 1f, z),
                         new Vector3(w * 0.3f, h * 0.15f, 1f), snowMat);
                 }
             }
@@ -158,9 +160,9 @@ namespace InkRidge.Environment
             {
                 Cube($"LanternBase_{side}", new Vector3(side * 2f, 0.4f, 2f),
                     new Vector3(0.3f, 0.5f, 0.3f), lanternMat);
-                Sphere($"LanternGlow_{side}", new Vector3(side * 2f, 0.7f, 2f),
+                DecorSphere($"LanternGlow_{side}", new Vector3(side * 2f, 0.7f, 2f),
                     new Vector3(0.25f, 0.25f, 0.25f), glowMat);
-                Cube($"LanternRoof_{side}", new Vector3(side * 2f, 0.9f, 2f),
+                DecorCube($"LanternRoof_{side}", new Vector3(side * 2f, 0.9f, 2f),
                     new Vector3(0.35f, 0.08f, 0.35f), lanternMat);
             }
         }

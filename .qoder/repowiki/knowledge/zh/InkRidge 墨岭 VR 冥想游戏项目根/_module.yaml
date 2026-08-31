@@ -1,0 +1,18 @@
+schema_version: 1
+module_path: ""
+title: InkRidge 墨岭 VR 冥想游戏项目根
+scope:
+    - .gitignore
+    - AGENTS.md
+    - Assembly-CSharp-Editor.csproj
+    - Assembly-CSharp.csproj
+    - InkRidge.Editor.csproj
+    - InkRidge.csproj
+    - InkRidge.sln
+    - LICENSE
+    - PRIVACY_POLICY.md
+    - README.md
+    - Tests.csproj
+source_files: []
+depends_on: []
+related_to: []

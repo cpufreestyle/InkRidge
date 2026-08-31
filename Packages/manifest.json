@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.unity.inputsystem": "1.7.0",
+    "com.unity.inputsystem": "1.14.0",
     "com.unity.textmeshpro": "3.0.9",
     "com.unity.ugui": "2.0.0",
     "com.unity.xr.interaction.toolkit": "3.0.1",

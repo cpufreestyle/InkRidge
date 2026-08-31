@@ -42,18 +42,18 @@ namespace InkRidge.Environment
                 float x = (float)(rng.NextDouble() * 2 - 1) * 10f;
                 float z = (float)(rng.NextDouble() * 2 - 1) * 10f;
                 if (Mathf.Abs(x) < 4f && Mathf.Abs(z) < 4f) continue;
-                Plane($"Moss_{i}", new Vector3(x, 0.01f, z),
+                DecorPlane($"Moss_{i}", new Vector3(x, 0.01f, z),
                     new Vector3(0.8f + (float)rng.NextDouble() * 0.6f, 1,
                         0.8f + (float)rng.NextDouble() * 0.6f), mossMat);
             }
 
-            // Fallen leaves scatter
+            // Fallen leaves scatter — 4 cm tall, pure surface detail
             var leafMat = MakeMat(new Color(0.65f, 0.45f, 0.20f), 0.002f);
             for (int i = 0; i < 20; i++)
             {
                 float x = (float)(rng.NextDouble() * 2 - 1) * 8f;
                 float z = (float)(rng.NextDouble() * 2 - 1) * 8f;
-                Sphere($"Leaf_{i}", new Vector3(x, 0.02f, z),
+                DecorSphere($"Leaf_{i}", new Vector3(x, 0.02f, z),
                     new Vector3(0.15f, 0.02f, 0.15f), leafMat);
             }
         }
@@ -115,20 +115,21 @@ namespace InkRidge.Environment
                     new Vector3(0.4f, 0.2f, 0.4f), woodMat);
             }
 
-            // Multi-layered roof (Chinese style)
+            // Multi-layered roof (Chinese style). Everything here sits at or
+            // above 4.6 m — decorative geometry, no colliders.
             // Layer 1 — wide eave (gray tile)
-            Cube("RoofEave", new Vector3(0, pillarH + 0.6f, 0),
+            DecorCube("RoofEave", new Vector3(0, pillarH + 0.6f, 0),
                 new Vector3(size * 3.4f, 0.15f, size * 3.4f), tileMat);
             // Layer 2 — main roof body (cinnabar red)
-            Cube("RoofMain", new Vector3(0, pillarH + 1.6f, 0),
+            DecorCube("RoofMain", new Vector3(0, pillarH + 1.6f, 0),
                 new Vector3(size * 2.6f, 0.2f, size * 2.6f), roofMat);
             // Layer 3 — roof top (smaller)
-            Cube("RoofTop", new Vector3(0, pillarH + 2.6f, 0),
+            DecorCube("RoofTop", new Vector3(0, pillarH + 2.6f, 0),
                 new Vector3(size * 1.6f, 0.15f, size * 1.6f), roofMat);
             // Ridge ornament — gold sphere + spire
-            Sphere("RoofOrnament", new Vector3(0, pillarH + 3.3f, 0),
+            DecorSphere("RoofOrnament", new Vector3(0, pillarH + 3.3f, 0),
                 new Vector3(0.4f, 0.4f, 0.4f), goldMat);
-            Cylinder("RoofSpire", new Vector3(0, pillarH + 3.8f, 0),
+            DecorCylinder("RoofSpire", new Vector3(0, pillarH + 3.8f, 0),
                 new Vector3(0.08f, 0.5f, 0.08f), goldMat);
 
             // Upturned eave corners (4 pieces with slight upward angle)
@@ -136,7 +137,7 @@ namespace InkRidge.Environment
             {
                 float sx = (i < 2 ? -1 : 1) * size * 1.7f;
                 float sz = (i % 2 == 0 ? -1 : 1) * size * 1.7f;
-                Cube($"EaveCorner_{i}", new Vector3(sx, pillarH + 0.8f, sz),
+                DecorCube($"EaveCorner_{i}", new Vector3(sx, pillarH + 0.8f, sz),
                     new Vector3(0.5f, 0.15f, 0.5f), tileMat);
             }
 
@@ -174,9 +175,9 @@ namespace InkRidge.Environment
 
                 // Randomly use autumn color for variety
                 var lm = rng.Next(4) == 0 ? autumnMat : (rng.Next(2) == 0 ? leafMat : darkLeafMat);
-                Sphere($"TreeLeaves_{i}", new Vector3(x, h + 0.5f, z),
+                DecorSphere($"TreeLeaves_{i}", new Vector3(x, h + 0.5f, z),
                     new Vector3(1.8f, 1.2f, 1.8f), lm);
-                Sphere($"TreeLeavesB_{i}", new Vector3(x + 0.5f, h + 0.2f, z + 0.3f),
+                DecorSphere($"TreeLeavesB_{i}", new Vector3(x + 0.5f, h + 0.2f, z + 0.3f),
                     new Vector3(1.2f, 0.8f, 1.2f), lm);
             }
         }
@@ -197,7 +198,7 @@ namespace InkRidge.Environment
                 float h = 5f + (float)rng.NextDouble() * 3f;
                 Cylinder($"Bamboo_{i}", new Vector3(x, h / 2f, z),
                     new Vector3(0.2f, h, 0.2f), bambooMat);
-                Sphere($"BambooLeaf_{i}", new Vector3(x, h + 0.3f, z),
+                DecorSphere($"BambooLeaf_{i}", new Vector3(x, h + 0.3f, z),
                     new Vector3(1.0f, 0.7f, 1.0f), leafMat);
             }
         }
@@ -228,8 +229,8 @@ namespace InkRidge.Environment
                     float z = 5f + i * 3f;
                     var base_obj = Cube($"LanternBase_{side}_{i}", new Vector3(side * 1.5f, 0.3f, z),
                         new Vector3(0.3f, 0.6f, 0.3f), lanternMat);
-                    // Lantern glow
-                    Sphere($"LanternGlow_{side}_{i}", new Vector3(side * 1.5f, 0.7f, z),
+                    // Lantern glow — sits on top of the base, which keeps its collider
+                    DecorSphere($"LanternGlow_{side}_{i}", new Vector3(side * 1.5f, 0.7f, z),
                         new Vector3(0.3f, 0.3f, 0.3f), glowMat);
                     // Lantern roof
                     Cube($"LanternRoof_{side}_{i}", new Vector3(side * 1.5f, 0.9f, z),

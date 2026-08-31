@@ -107,6 +107,45 @@ namespace InkRidge.Environment
         }
 
         /// <summary>
+        /// Marks a primitive as purely decorative and strips the collider that
+        /// CreatePrimitive attaches automatically.
+        ///
+        /// A runtime-built scene creates hundreds of props (the bamboo scene
+        /// alone makes ~240 leaf spheres). Every one arrives with a Collider the
+        /// player can never meaningfully touch — they hang well above head
+        /// height, or sit outside the boundary walls. Those colliders still cost
+        /// broadphase work, memory and — for Plane primitives — a MeshCollider
+        /// build. Stripping them is the single cheapest win in scene setup.
+        /// </summary>
+        protected static GameObject Decorative(GameObject go)
+        {
+            if (go == null) return null;
+            var col = go.GetComponent<Collider>();
+            if (col != null) Destroy(col);
+            return go;
+        }
+
+        /// <summary>Decorative variant of <see cref="Cube"/>.</summary>
+        protected GameObject DecorCube(string name, Vector3 pos, Vector3 scale,
+            Material mat, Transform parent = null)
+            => Decorative(Cube(name, pos, scale, mat, parent));
+
+        /// <summary>Decorative variant of <see cref="Cylinder"/>.</summary>
+        protected GameObject DecorCylinder(string name, Vector3 pos, Vector3 scale,
+            Material mat, Transform parent = null)
+            => Decorative(Cylinder(name, pos, scale, mat, parent));
+
+        /// <summary>Decorative variant of <see cref="Sphere"/>.</summary>
+        protected GameObject DecorSphere(string name, Vector3 pos, Vector3 scale,
+            Material mat, Transform parent = null)
+            => Decorative(Sphere(name, pos, scale, mat, parent));
+
+        /// <summary>Decorative variant of <see cref="Plane"/>.</summary>
+        protected GameObject DecorPlane(string name, Vector3 pos, Vector3 scale,
+            Material mat, Transform parent = null)
+            => Decorative(Plane(name, pos, scale, mat, parent));
+
+        /// <summary>
         /// Ink-painting gradient skybox (Gongbi/InkSkybox) with drifting mist bands.
         /// Also sets Trilight ambient so objects pick up sky/ground bounce light.
         /// </summary>
@@ -159,6 +198,10 @@ namespace InkRidge.Environment
         protected virtual void Start()
         {
             Build();
+            // 每日一境: date-seeded fog/wind variation + daily check-in.
+            gameObject.AddComponent<DailyZen>();
+            // 呼吸场景互动: landscape gathers/releases with the breath cycle.
+            gameObject.AddComponent<InkRidge.Core.BreathSceneReactive>();
             // Runtime-generated primitives cannot be pre-batched in the editor,
             // so merge them once here: one draw call per material (+ outline pass)
             // instead of one per renderer. Renderers flagged IDynamicMeshRenderer

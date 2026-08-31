@@ -22,13 +22,32 @@ namespace InkRidge.Environment
         void Start()
         {
             if (_directionalLight == null)
-                _directionalLight = FindObjectOfType<Light>();
+                _directionalLight = FindSceneSun();
 
             if (_directionalLight != null)
             {
                 _baseIntensity = _directionalLight.intensity;
                 _baseColor = _directionalLight.color;
             }
+        }
+
+        /// <summary>
+        /// Locate the scene's key light. FindObjectOfType&lt;Light&gt;() returns
+        /// the first light of any type, which is fine today (the sun is the only
+        /// light) but silently grabs a lamp the moment one is added. Prefer the
+        /// sun, then fall back to the first directional light.
+        /// </summary>
+        private static Light FindSceneSun()
+        {
+            if (RenderSettings.sun != null)
+                return RenderSettings.sun;
+
+            foreach (var candidate in FindObjectsOfType<Light>())
+            {
+                if (candidate.type == LightType.Directional)
+                    return candidate;
+            }
+            return null;
         }
 
         public void SetBreathGuide(BreathGuide guide)

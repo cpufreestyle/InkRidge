@@ -18,35 +18,37 @@ namespace InkRidge.Core
 
         private static readonly int IntensityId = Shader.PropertyToID("_Intensity");
 
+        /// <summary>
+        /// True while the effect still has something to draw — either the player
+        /// is moving, or the fade-out hasn't finished.
+        ///
+        /// OnRenderImage costs a full-screen blit per eye even when it just
+        /// passes the image through, because the destination target still has to
+        /// be written. The driver turns this component off entirely whenever
+        /// this returns false, so the whole pass disappears from the frame.
+        /// </summary>
+        public bool WantsRender =>
+            ComfortSettings.VignetteEnabled &&
+            (_movementActive || _currentIntensity > 0.001f);
+
         void Awake()
         {
-            _vignetteMat = new Material(Shader.Find("Hidden/Vignette"));
-            if (_vignetteMat == null)
+            var shader = Shader.Find("Hidden/Vignette");
+            if (shader == null)
             {
                 Debug.LogWarning("[VignetteEffect] Vignette shader not found, disabling.");
                 enabled = false;
                 return;
             }
+            _vignetteMat = new Material(shader);
             _currentIntensity = 0f;
         }
 
         void OnRenderImage(RenderTexture src, RenderTexture dst)
         {
-            if (_vignetteMat == null || !ComfortSettings.VignetteEnabled)
-            {
-                Graphics.Blit(src, dst);
-                return;
-            }
-
             _currentIntensity = Mathf.Lerp(_currentIntensity,
                 _movementActive ? _maxIntensity : 0f,
                 _fadeSpeed * Time.deltaTime);
-
-            if (_currentIntensity < 0.01f)
-            {
-                Graphics.Blit(src, dst);
-                return;
-            }
 
             _vignetteMat.SetFloat(IntensityId, _currentIntensity);
             Graphics.Blit(src, dst, _vignetteMat);

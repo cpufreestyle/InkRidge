@@ -17,8 +17,16 @@ namespace InkRidge.Meditation
         public float rhythmStability;
         public string timeStampISO;
 
+        /// <summary>
+        /// True when the player ended the session early via hold-to-exit.
+        /// Early exits keep their record but do not unlock the next scene,
+        /// so history stays honest while the journey stays completable.
+        /// </summary>
+        public bool completedEarly;
+
         public BreathData(int sceneIndex, string sceneName, string breathPattern,
-                          int completedCycles, float totalDurationSec, float rhythmStability)
+                          int completedCycles, float totalDurationSec, float rhythmStability,
+                          bool completedEarly = false)
         {
             this.sceneIndex = sceneIndex;
             this.sceneName = sceneName;
@@ -26,6 +34,7 @@ namespace InkRidge.Meditation
             this.completedCycles = completedCycles;
             this.totalDurationSec = totalDurationSec;
             this.rhythmStability = rhythmStability;
+            this.completedEarly = completedEarly;
             this.timeStampISO = DateTime.UtcNow.ToString("o");
         }
 

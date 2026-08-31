@@ -17,17 +17,29 @@ namespace InkRidge.Core
         private float _currentAmbientVolume;
         private bool _inMeditation;
 
+        /// <summary>Currently faded ambient level (dips during meditation).</summary>
+        public float AmbientVolume => _currentAmbientVolume;
+
+        /// <summary>Current SFX level.</summary>
+        public float SfxVolume => _sfxVolume;
+
         void Start()
         {
             _currentAmbientVolume = _ambientVolume;
+            AudioListener.volume = _masterVolume;
         }
 
         void Update()
         {
             float target = _inMeditation ? _ambientVolume * _meditationAmbientDip : _ambientVolume;
-            _currentAmbientVolume = Mathf.Lerp(_currentAmbientVolume, target, 2f * Time.deltaTime);
 
-            AudioListener.volume = _masterVolume;
+            // The old loop lerped every frame forever and re-assigned a constant
+            // AudioListener.volume, even though nothing ever read the result.
+            // Bail out once the fade has settled so an idle scene costs nothing.
+            if (Mathf.Approximately(_currentAmbientVolume, target))
+                return;
+
+            _currentAmbientVolume = Mathf.Lerp(_currentAmbientVolume, target, 2f * Time.deltaTime);
         }
 
         public void SetMeditationMode(bool active)
@@ -38,6 +50,7 @@ namespace InkRidge.Core
         public void SetMasterVolume(float volume)
         {
             _masterVolume = Mathf.Clamp01(volume);
+            AudioListener.volume = _masterVolume;
         }
 
         public void SetSFXVolume(float volume)

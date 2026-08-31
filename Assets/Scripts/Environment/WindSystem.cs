@@ -31,6 +31,21 @@ namespace InkRidge.Environment
         private static readonly int GustDensityId = Shader.PropertyToID("_GustDensity");
         private static readonly int WindIntensityId = Shader.PropertyToID("_WindIntensity");
 
+        void OnEnable()
+        {
+            // Speed / turbulence / gust density are fixed for the scene's
+            // lifetime. Uploading them every frame used to cost three of the
+            // seven global writes with no benefit.
+            Shader.SetGlobalFloat(WindSpeedId, _windSpeed);
+            Shader.SetGlobalFloat(WindTurbulenceId, _windTurbulence);
+            Shader.SetGlobalFloat(GustDensityId, _gustDensity);
+        }
+
+        void OnValidate()
+        {
+            if (Application.isPlaying) OnEnable();
+        }
+
         void Update()
         {
             _currentIntensity = Mathf.Lerp(_currentIntensity, _targetIntensity,
@@ -40,12 +55,10 @@ namespace InkRidge.Environment
             Vector2 dir = _windDirection + new Vector2(Mathf.Sin(t) * 0.2f, Mathf.Cos(t * 0.7f) * 0.2f);
             dir.Normalize();
 
-            Shader.SetGlobalFloat(WindSpeedId, _windSpeed);
+            // Only the animated values are pushed per frame (4 writes, down from 7).
             Shader.SetGlobalFloat(WindMagnitudeId, _windMagnitude * _currentIntensity);
-            Shader.SetGlobalFloat(WindTurbulenceId, _windTurbulence);
             Shader.SetGlobalFloat(WindDirXId, dir.x);
             Shader.SetGlobalFloat(WindDirZId, dir.y);
-            Shader.SetGlobalFloat(GustDensityId, _gustDensity);
             Shader.SetGlobalFloat(WindIntensityId, _currentIntensity);
         }
 
@@ -53,6 +66,13 @@ namespace InkRidge.Environment
         public void SetIntensity(float intensity)
         {
             _targetIntensity = Mathf.Clamp01(intensity);
+        }
+
+        /// <summary>Set the base wind direction (normalized internally). Used by DailyZen.</summary>
+        public void SetDirection(Vector2 direction)
+        {
+            if (direction.sqrMagnitude < 0.0001f) return;
+            _windDirection = direction.normalized;
         }
     }
 }

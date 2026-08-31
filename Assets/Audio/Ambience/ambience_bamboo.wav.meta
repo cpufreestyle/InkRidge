@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ec159ccdc50654651957cfb17920bd91
+guid: WikesCP+AC93xeQGncV8n34tIiOhGIYSQoFHOGdibM9GhwYl41DTxwQ=
 AudioImporter:
   externalObjects: {}
   serializedVersion: 7
@@ -9,7 +9,7 @@ AudioImporter:
     sampleRateSetting: 0
     sampleRateOverride: 44100
     compressionFormat: 1
-    quality: 1
+    quality: 0.7
     conversionMode: 0
     preloadAudioData: 0
   platformSettingOverrides: {}

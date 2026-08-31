@@ -51,13 +51,45 @@ namespace InkRidge.Environment
             zenithColor = new Color(0.65f, 0.70f, 0.75f)
         };
 
-        void LateUpdate()
+        private static readonly int FogDistanceId = Shader.PropertyToID("_FogDistance");
+        private static readonly int FogZenithId = Shader.PropertyToID("_FogColorZenith");
+        private static readonly int FogHorizonId = Shader.PropertyToID("_FogColorHorizon");
+        private static readonly int FogHorizonDistId = Shader.PropertyToID("_FogColorHorizonDistance");
+
+        /// <summary>
+        /// These globals are constant for the lifetime of the scene — nothing
+        /// tweaks them at runtime. They used to be pushed in LateUpdate, costing
+        /// four global-shader writes per frame (which dirty the global constant
+        /// buffer) to upload values that never changed. Push once instead.
+        /// </summary>
+        void OnEnable() => Apply();
+
+        // Keeps the editor viewport live while the inspector is being tweaked.
+        void OnValidate() => Apply();
+
+        void OnDisable() => Clear();
+
+        /// <summary>Push the current settings to the global shader state.</summary>
+        public void Apply()
         {
-            Shader.SetGlobalVector("_FogDistance",
-                new Vector4(1f / (fog.end - fog.start), fog.start, 0, 0));
-            Shader.SetGlobalVector("_FogColorZenith", fog.zenithColor);
-            Shader.SetGlobalVector("_FogColorHorizon", fog.horizonColor);
-            Shader.SetGlobalVector("_FogColorHorizonDistance", fog.horizonColorDistance);
+            float span = Mathf.Max(fog.end - fog.start, 0.0001f);
+            Shader.SetGlobalVector(FogDistanceId, new Vector4(1f / span, fog.start, 0f, 0f));
+            Shader.SetGlobalVector(FogZenithId, fog.zenithColor);
+            Shader.SetGlobalVector(FogHorizonId, fog.horizonColor);
+            Shader.SetGlobalVector(FogHorizonDistId, fog.horizonColorDistance);
+        }
+
+        /// <summary>
+        /// Reset to a neutral, invisible fog. Global shader values survive scene
+        /// loads, so without this a scene with no GradientFog (e.g. 04_Summit)
+        /// inherits the previous scene's fog colours.
+        /// </summary>
+        public static void Clear()
+        {
+            Shader.SetGlobalVector(FogDistanceId, new Vector4(0f, 0f, 0f, 0f));
+            Shader.SetGlobalVector(FogZenithId, Color.white);
+            Shader.SetGlobalVector(FogHorizonId, Color.white);
+            Shader.SetGlobalVector(FogHorizonDistId, Color.white);
         }
     }
 }

@@ -54,7 +54,7 @@ namespace InkRidge.Environment
             {
                 float z = rng.Next(0, (int)_trailLength);
                 float x = (_trailWidth / 2f + 1f) * (rng.Next(2) == 0 ? -1 : 1);
-                Plane($"Moss_{i}", new Vector3(x, 0.02f, z),
+                DecorPlane($"Moss_{i}", new Vector3(x, 0.02f, z),
                     new Vector3(0.8f + (float)rng.NextDouble() * 0.5f, 1,
                         0.8f + (float)rng.NextDouble() * 0.5f), mossMat);
             }
@@ -109,19 +109,20 @@ namespace InkRidge.Environment
                         new Vector3(radius * 2.3f, 0.08f, radius * 2.3f), darkBambooMat);
                 }
 
-                // Leaf clusters at top (3 overlapping spheres for fuller look)
+                // Leaf clusters at top (3 overlapping spheres for fuller look).
+                // Decorative: 5–9 m up, far out of reach — no collider needed.
                 float leafY = height + 0.3f;
-                Sphere($"Leaves_{i}_A", new Vector3(x, leafY, z),
+                DecorSphere($"Leaves_{i}_A", new Vector3(x, leafY, z),
                     new Vector3(1.2f, 0.8f, 1.2f), leafM);
-                Sphere($"Leaves_{i}_B", new Vector3(x + 0.4f, leafY + 0.3f, z + 0.3f),
+                DecorSphere($"Leaves_{i}_B", new Vector3(x + 0.4f, leafY + 0.3f, z + 0.3f),
                     new Vector3(0.9f, 0.6f, 0.9f), leafM);
-                Sphere($"Leaves_{i}_C", new Vector3(x - 0.3f, leafY - 0.2f, z - 0.4f),
+                DecorSphere($"Leaves_{i}_C", new Vector3(x - 0.3f, leafY - 0.2f, z - 0.4f),
                     new Vector3(0.8f, 0.5f, 0.8f), leafM);
 
                 // Small ground bush at bamboo base
                 if (rng.Next(3) == 0)
                 {
-                    Sphere($"Bush_{i}", new Vector3(x, 0.2f, z),
+                    DecorSphere($"Bush_{i}", new Vector3(x, 0.2f, z),
                         new Vector3(0.6f, 0.3f, 0.6f), darkLeafMat);
                 }
             }

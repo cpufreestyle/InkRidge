@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace InkRidge.Meditation
@@ -9,6 +10,17 @@ namespace InkRidge.Meditation
     public class BreathGuide
     {
         public enum Phase { Inhale, HoldAfterInhale, Exhale, HoldAfterExhale, Idle }
+
+        /// <summary>
+        /// Fired whenever the guide moves to a new phase — including the first
+        /// Inhale from Start() and the final Idle from Stop().
+        ///
+        /// This is the single thing audio and haptics subscribe to. The old
+        /// design had BreathAudioSync expose a public OnPhaseChanged() that
+        /// nothing ever called, so breath audio never played at all. Don't
+        /// reintroduce a pull-based API here.
+        /// </summary>
+        public event Action<Phase> PhaseChanged;
 
         public enum Pattern
         {
@@ -51,6 +63,8 @@ namespace InkRidge.Meditation
             _cycleDurationSqSum = 0f;
             _cycleCount = 0;
             _running = true;
+
+            PhaseChanged?.Invoke(CurrentPhase);
         }
 
         public void Stop()
@@ -58,6 +72,8 @@ namespace InkRidge.Meditation
             _running = false;
             CurrentPhase = Phase.Idle;
             PhaseProgress = 0f;
+
+            PhaseChanged?.Invoke(Phase.Idle);
         }
 
         /// <summary>Advance the breath cycle. Call every frame with Time.deltaTime.</summary>
@@ -126,6 +142,8 @@ namespace InkRidge.Meditation
 
             _phaseTimer = 0f;
             PhaseProgress = 0f;
+
+            PhaseChanged?.Invoke(CurrentPhase);
         }
 
         private void RecordCycleDuration()

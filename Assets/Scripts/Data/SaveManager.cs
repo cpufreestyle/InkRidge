@@ -20,6 +20,7 @@ namespace InkRidge.Data
             public float totalWalkingTime;
             public int totalSessions;
             public List<string> meditationRecords = new List<string>();
+            public List<string> zenDays = new List<string>(); // "yyyy-MM-dd" 每日一境打卡
         }
 
         private static readonly string SavePath =
@@ -87,6 +88,26 @@ namespace InkRidge.Data
         }
 
         /// <summary>Clear all save data. For testing.</summary>
+        public static bool IsZenDayMarked(string dateStr)
+        {
+            return Load().zenDays.Contains(dateStr);
+        }
+
+        /// <summary>Marks today's Daily Zen visit. Returns true if it was the first mark today.</summary>
+        public static bool MarkZenDay(string dateStr)
+        {
+            var save = Load();
+            if (save.zenDays.Contains(dateStr)) return false;
+            save.zenDays.Add(dateStr);
+            Save(save);
+            return true;
+        }
+
+        public static int GetZenDayCount()
+        {
+            return Load().zenDays.Count;
+        }
+
         public static void Clear()
         {
             if (File.Exists(SavePath))

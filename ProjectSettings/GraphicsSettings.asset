@@ -6,31 +6,37 @@ GraphicsSettings:
   serializedVersion: 15
   m_Deferred:
     m_Mode: 1
-    m_Shader: {fileID: 0}
+    m_Shader: {fileID: 69, guid: 0000000000000000f000000000000000, type: 0}
   m_DeferredReflections:
     m_Mode: 1
-    m_Shader: {fileID: 0}
+    m_Shader: {fileID: 74, guid: 0000000000000000f000000000000000, type: 0}
   m_ScreenSpaceShadows:
     m_Mode: 1
-    m_Shader: {fileID: 0}
+    m_Shader: {fileID: 64, guid: 0000000000000000f000000000000000, type: 0}
   m_DepthNormals:
     m_Mode: 1
-    m_Shader: {fileID: 0}
+    m_Shader: {fileID: 62, guid: 0000000000000000f000000000000000, type: 0}
   m_MotionVectors:
     m_Mode: 1
-    m_Shader: {fileID: 0}
+    m_Shader: {fileID: 75, guid: 0000000000000000f000000000000000, type: 0}
   m_LightHalo:
     m_Mode: 1
-    m_Shader: {fileID: 0}
+    m_Shader: {fileID: 105, guid: 0000000000000000f000000000000000, type: 0}
   m_LensFlare:
     m_Mode: 1
-    m_Shader: {fileID: 0}
+    m_Shader: {fileID: 102, guid: 0000000000000000f000000000000000, type: 0}
   m_VideoShadersIncludeMode: 2
-  m_LengthOfAlwaysIncludedShadersInInspector: 0
-  m_AlwaysIncludedShaders: []
+  m_LengthOfAlwaysIncludedShadersInInspector: 6
+  m_AlwaysIncludedShaders:
+  - {fileID: 4800000, guid: d28dd3a6f902647c893dd6e7a15b2dee, type: 3}
+  - {fileID: 4800000, guid: 79aef5ef96ff74e2eb4eaf685b0ba34e, type: 3}
+  - {fileID: 4800000, guid: 06c5b3e55c1c148caa4a9aafe8556501, type: 3}
+  - {fileID: 4800000, guid: 012b0854d5e144f919bb023da38ac100, type: 3}
+  - {fileID: 4800000, guid: 195a6c42b1cea4d27b3190802d63e1fc, type: 3}
+  - {fileID: 4800000, guid: 1b0f02233873841819cfe74bef28d03d, type: 3}
   m_PreloadedShaders: []
   m_PreloadShadersBatchTimeLimit: -1
-  m_SpritesDefaultMaterial: {fileID: 0}
+  m_SpritesDefaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_CustomRenderPipeline: {fileID: 0}
   m_TransparencySortMode: 0
   m_TransparencySortAxis: {x: 0, y: 0, z: 1}

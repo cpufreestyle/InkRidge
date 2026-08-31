@@ -121,6 +121,12 @@ namespace InkRidge.UI
             canvasObj.transform.position = new Vector3(0f, _promptHeight, _promptDistance);
             canvasObj.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
 
+            // WorldSpace canvas units are METERS. A 320-unit panel would be a
+            // 320 m wall the player stands inside — the "only a sliver of the
+            // world visible" bug. Author the panel at screen-style size, then
+            // scale the whole canvas down to a physical ~1.6 m × 0.6 m board.
+            canvasObj.transform.localScale = new Vector3(0.005f, 0.005f, 0.005f);
+
             canvasObj.AddComponent<UnityEngine.UI.GraphicRaycaster>();
 
             var rt = canvasObj.GetComponent<RectTransform>();

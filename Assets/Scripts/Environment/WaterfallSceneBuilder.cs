@@ -114,12 +114,13 @@ namespace InkRidge.Environment
                     new Vector3(0.6f + (float)rng.NextDouble() * 0.4f, 0.4f, 0.6f), splashMat);
             }
 
-            // Mist at base
+            // Mist at base — atmosphere only. These used to be solid 1.5 m
+            // colliders sitting right across the approach to the pool.
             var mistMat = MakeMat(new Color(0.92f, 0.95f, 0.98f, 0.4f), 0.001f);
             for (int i = 0; i < 10; i++)
             {
                 float x = (float)(rng.NextDouble() * 2 - 1) * 3f;
-                Sphere($"Mist_{i}", new Vector3(x, 0.5f + (float)rng.NextDouble(), 2f),
+                DecorSphere($"Mist_{i}", new Vector3(x, 0.5f + (float)rng.NextDouble(), 2f),
                     new Vector3(1.5f, 0.8f, 1.5f), mistMat);
             }
         }
@@ -147,7 +148,7 @@ namespace InkRidge.Environment
             {
                 float x = (float)(rng.NextDouble() * 2 - 1) * 2.5f;
                 float z = 4f + (float)(rng.NextDouble() * 2 - 1) * 2f;
-                Sphere($"Lotus_{i}", new Vector3(x, 0.18f, z),
+                DecorSphere($"Lotus_{i}", new Vector3(x, 0.18f, z),
                     new Vector3(0.6f, 0.05f, 0.6f), lotusMat);
             }
         }
@@ -208,7 +209,7 @@ namespace InkRidge.Environment
                     new Vector3(0.2f, h, 0.2f), bambooMat);
 
                 var lm = rng.Next(2) == 0 ? leafMat : darkLeafMat;
-                Sphere($"Leaves_{i}", new Vector3(x, h + 0.3f, z),
+                DecorSphere($"Leaves_{i}", new Vector3(x, h + 0.3f, z),
                     new Vector3(1.0f, 0.7f, 1.0f), lm);
             }
         }

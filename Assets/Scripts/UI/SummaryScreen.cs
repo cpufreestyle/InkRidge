@@ -48,7 +48,7 @@ namespace InkRidge.UI
             _breathCyclesText?.SetText($"呼吸循环: {currentBreathCycles} 次");
             _stabilityText?.SetText($"呼吸稳定度: {avgStability * 100f:F0}%");
 
-            _totalSessionsText?.SetText($"累计完成: {save.totalSessions} 次");
+            _totalSessionsText?.SetText($"累计完成: {save.totalSessions} 次 · 每日一境 {SaveManager.GetZenDayCount()} 天");
             _totalWalkTimeText?.SetText($"累计步行: {FormatTime(save.totalWalkingTime)}");
             _totalMeditationTimeText?.SetText($"累计冥想: {FormatTime(save.totalMeditationTime)}");
 
