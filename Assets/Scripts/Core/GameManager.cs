@@ -31,10 +31,30 @@ namespace InkRidge.Core
             }
         }
 
+        [Header("Boot")]
+        [SerializeField, Tooltip("When launched in the Start scene, auto-enter the game after this many seconds (set 0 to disable).")]
+        private float _autoStartDelay = 2f;
+
+        private float _bootTimer;
+
         void Update()
         {
             _sceneWalkTimer += Time.deltaTime;
+
+            // Skip the start-scene wait entirely: users launch straight into
+            // the meditation flow. Only fires in the Start scene (index 0).
+            if (_autoStartDelay > 0f && !_booted)
+            {
+                _bootTimer += Time.deltaTime;
+                if (_bootTimer >= _autoStartDelay)
+                {
+                    _booted = true;
+                    StartGame();
+                }
+            }
         }
+
+        private bool _booted;
 
         public void OnMeditationComplete(int sceneIndex)
         {
