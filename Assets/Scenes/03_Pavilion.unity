@@ -130,6 +130,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+  - component: {fileID: 49534253}
   - component: {fileID: 49534252}
   m_Layer: 0
   m_Name: SceneRoot
@@ -285,7 +286,6 @@ GameObject:
   - component: {fileID: 622322455}
   - component: {fileID: 622322454}
   - component: {fileID: 622322453}
-  - component: {fileID: 622322452}
   - component: {fileID: 622322451}
   - component: {fileID: 622322456}
   m_Layer: 0
@@ -543,6 +543,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &858476634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974820273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa7b4195685c3846be746c74f0ab2f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &859914492
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,6 +882,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1288283969}
   - component: {fileID: 1288283968}
+  - component: {fileID: 1288283970}
   m_Layer: 0
   m_Name: __Scene_BreathReactive
   m_TagString: Untagged
@@ -897,9 +910,8 @@ MonoBehaviour:
   _lightDim: 0.55
   _lightGlow: 1.45
   _affectFog: 0
-  _fogThin: 0.012
-  _fogThick: 0.03
-  _fogIdle: 0.02
+  _fogThinFactor: 0.6
+  _fogThickFactor: 1.5
   _glowRenderers: []
   _glowColorProp: _MainColor
   _glowDim: 0.7
@@ -919,6 +931,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1288283970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288283967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6385c434a41814317a606b4e404e549b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fogHueShift: 0.04
+  _fogDensitySwing: 0.3
+  _varyWindDirection: 1
 --- !u!1 &1431787581
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,6 +1106,7 @@ MonoBehaviour:
   _bambooSceneIndex: 1
   _summitSceneIndex: 4
   _endSceneIndex: 5
+  _autoStartDelay: 2
 --- !u!4 &1473676694
 Transform:
   m_ObjectHideFlags: 0
@@ -6381,13 +6409,14 @@ GameObject:
   - component: {fileID: 1974820275}
   - component: {fileID: 1974820274}
   - component: {fileID: 858476634}
- 0
-  m_Name: ContinuousMoveProvider
+  - component: {fileID: 1974820276}
+  m_Layer: 0
+  m_Name: 
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1974820274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6450,6 +6479,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 622322455}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1974820276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974820273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a26c941eb8a46f7b6d00416227ab8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_XROrigin: {fileID: 0}
+  m_BodyPositionEvaluatorObject: {fileID: 0}
+  m_ConstrainedBodyManipulatorObject: {fileID: 0}
+  m_UseCharacterControllerIfExists: 1
 --- !u!1 &1978802208
 GameObject:
   m_ObjectHideFlags: 0
@@ -6481,19 +6526,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 622322455}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &858476634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974820273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fa7b4195685c3846be746c74f0ab2f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -33,9 +33,12 @@ namespace InkRidge.Core
         [Header("Fog Response")]
         [SerializeField, Tooltip("Fog thins on inhale, thickens on exhale.")]
         private bool _affectFog = false;
-        [SerializeField] private float _fogThin = 0.012f;
-        [SerializeField] private float _fogThick = 0.03f;
-        [SerializeField] private float _fogIdle = 0.02f;
+        [SerializeField, Tooltip("Inhale density = baseline * this.")]
+        private float _fogThinFactor = 0.6f;
+        [SerializeField, Tooltip("Exhale density = baseline * this.")]
+        private float _fogThickFactor = 1.5f;
+
+        private float _fogBaseline;
 
         [Header("Emissive Renderer Response (firefly planes / glow objects)")]
         [SerializeField, Tooltip("Optional renderers whose materials brighten on inhale.")]
@@ -77,14 +80,16 @@ namespace InkRidge.Core
         public void SetBreathSource(Meditation.BreathGuide guide)
         {
             _guide = guide;
+            if (guide != null && _fogBaseline <= 0f)
+                _fogBaseline = RenderSettings.fogDensity; // capture once, includes DailyZen drift
             if (guide == null)
             {
                 // Release the scene back to neutral.
                 _currentBlend = 0f;
                 if (_wind != null)
                     _wind.SetIntensity(Mathf.Lerp(_releaseIntensity, 1f, 0.5f));
-                if (_affectFog)
-                    RenderSettings.fogDensity = _fogIdle;
+                if (_affectFog && _fogBaseline > 0f)
+                    RenderSettings.fogDensity = _fogBaseline;
                 ApplyLights(1f);
                 ApplyGlow(1f);
             }
@@ -117,8 +122,11 @@ namespace InkRidge.Core
 
             // Fog parts on inhale (mountain summit reads clearer) and settles
             // back in on exhale — an ink-wash inhale/exhale.
-            if (_affectFog)
-                RenderSettings.fogDensity = Mathf.Lerp(_fogThick, _fogThin, _currentBlend);
+            if (_affectFog && _fogBaseline > 0f)
+                RenderSettings.fogDensity = Mathf.Lerp(
+                    _fogBaseline * _fogThickFactor,
+                    _fogBaseline * _fogThinFactor,
+                    _currentBlend);
 
             ApplyGlow(Mathf.Lerp(_glowDim, _glowGlow, _currentBlend));
         }
