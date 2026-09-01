@@ -130,7 +130,6 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 49534253}
   - component: {fileID: 49534252}
   m_Layer: 0
   m_Name: SceneRoot
@@ -315,20 +314,6 @@ MonoBehaviour:
   _footstepSource: {fileID: 1021224000}
   _footstepClip: {fileID: 8300000, guid: af1c4c29b89c04a93aad2708df85ff23, type: 3}
   _stepInterval: 0.8
---- !u!114 &622322452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 622322450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcace12ea093d412c81480071a79b6b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxIntensity: 0.4
-  _fadeSpeed: 3
 --- !u!114 &622322453
 MonoBehaviour:
   m_ObjectHideFlags: 0
