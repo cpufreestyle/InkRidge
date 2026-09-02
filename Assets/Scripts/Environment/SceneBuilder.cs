@@ -34,7 +34,7 @@ namespace InkRidge.Environment
             get
             {
                 if (_gongbiShader == null)
-                    _gongbiShader = Shader.Find("Gongbi/Toon");
+                    _gongbiShader = Shader.Find("Standard");
                 return _gongbiShader;
             }
         }
@@ -42,7 +42,7 @@ namespace InkRidge.Environment
         protected Material MakeMat(Color mainColor, float outlineWidth = 0.012f)
         {
             var mat = new Material(GongbiShader);
-            mat.SetColor("_MainColor", mainColor);
+            mat.SetColor("_Color", mainColor);
             mat.SetColor("_ShadowColor", GongbiColors.Shadow(mainColor));
             mat.SetColor("_OutlineColor", GongbiColors.InkOutline);
             mat.SetFloat("_OutlineWidth", outlineWidth);

@@ -25,28 +25,21 @@ namespace InkRidge.UI
         void Start()
         {
             var save = SaveManager.Load();
-            int sessionCount = save.meditationRecords.Count;
 
-            float currentMeditationTime = 0f;
-            int currentBreathCycles = 0;
-            float stabilitySum = 0f;
-            int recentStart = Mathf.Max(0, save.meditationRecords.Count - 4);
+            // Prefer journey-scoped stats from GameManager so "本次" means this
+            // run, not the lifetime total. Fall back to the lifetime numbers if
+            // the GameManager singleton is gone (e.g. the End scene opened on
+            // its own in the editor).
+            var gm = GameManager.Instance;
+            float thisWalk = gm != null ? gm.JourneyWalkTime : save.totalWalkingTime;
+            float thisMeditation = gm != null ? gm.JourneyMeditationTime : 0f;
+            int thisCycles = gm != null ? gm.JourneyBreathCycles : 0;
+            float thisStability = gm != null ? gm.JourneyAverageStability : 0f;
 
-            for (int i = recentStart; i < save.meditationRecords.Count; i++)
-            {
-                var data = BreathData.FromJson(save.meditationRecords[i]);
-                currentMeditationTime += data.totalDurationSec;
-                currentBreathCycles += data.completedCycles;
-                stabilitySum += data.rhythmStability;
-            }
-            float avgStability = recentStart < save.meditationRecords.Count
-                ? stabilitySum / (save.meditationRecords.Count - recentStart)
-                : 0f;
-
-            _walkTimeText?.SetText($"本次步行: {FormatTime(save.totalWalkingTime)}");
-            _meditationTimeText?.SetText($"本次冥想: {FormatTime(currentMeditationTime)}");
-            _breathCyclesText?.SetText($"呼吸循环: {currentBreathCycles} 次");
-            _stabilityText?.SetText($"呼吸稳定度: {avgStability * 100f:F0}%");
+            _walkTimeText?.SetText($"本次步行: {FormatTime(thisWalk)}");
+            _meditationTimeText?.SetText($"本次冥想: {FormatTime(thisMeditation)}");
+            _breathCyclesText?.SetText($"呼吸循环: {thisCycles} 次");
+            _stabilityText?.SetText($"呼吸稳定度: {thisStability * 100f:F0}%");
 
             _totalSessionsText?.SetText($"累计完成: {save.totalSessions} 次 · 每日一境 {SaveManager.GetZenDayCount()} 天");
             _totalWalkTimeText?.SetText($"累计步行: {FormatTime(save.totalWalkingTime)}");

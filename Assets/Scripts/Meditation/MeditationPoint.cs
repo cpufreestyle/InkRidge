@@ -273,7 +273,7 @@ namespace InkRidge.Meditation
                 _breathGuide.GetTotalDuration(),
                 _breathGuide.GetRhythmStability()
             );
-            SaveManager.AddMeditationRecord(record);
+            GameManager.Instance?.RecordMeditation(record);
             SaveManager.UnlockScene(_sceneIndex + 1);
 
             GameManager.Instance?.OnMeditationComplete(_sceneIndex);
@@ -294,7 +294,7 @@ namespace InkRidge.Meditation
                     _breathGuide.GetRhythmStability(),
                     completedEarly: true
                 );
-                SaveManager.AddMeditationRecord(record);
+                GameManager.Instance?.RecordMeditation(record);
             }
 
             _haptics?.Pulse(0.6f, 0.15f);
