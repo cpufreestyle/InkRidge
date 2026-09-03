@@ -23,6 +23,7 @@ Shader "Gongbi/BreathGlow"
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
+            #pragma multi_compile_instancing
             #include "UnityCG.cginc"
 
             float _Progress;
@@ -35,6 +36,7 @@ Shader "Gongbi/BreathGlow"
             struct appdata
             {
                 float4 vertex : POSITION;
+                UNITY_VERTEX_INPUT_INSTANCE_ID
                 UNITY_VERTEX_INPUT_INSTANCE_ID
                 float2 uv : TEXCOORD0;
             };
@@ -49,6 +51,8 @@ Shader "Gongbi/BreathGlow"
             v2f vert(appdata v)
             {
                 v2f o;
+                UNITY_SETUP_INSTANCE_ID(v);
+                UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
                 UNITY_SETUP_INSTANCE_ID(v);
                 UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
                 // Scale the quad based on breath progress
