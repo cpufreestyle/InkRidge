@@ -153,6 +153,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gazeTarget: {fileID: 430124183}
   _gazeHoldSeconds: 3
+  _gazeAngle: 25
+  _idleAutoStartSeconds: 12
   _promptDistance: 3.2
   _promptHeight: 2.3
 --- !u!4 &264872650
@@ -325,6 +327,7 @@ GameObject:
   - component: {fileID: 1090323823}
   - component: {fileID: 1090323822}
   - component: {fileID: 1090323821}
+  - component: {fileID: 1090323824}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -475,6 +478,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1090323824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1090323819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccb80b69e9ae242fda08da38b0014230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1181703393
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,6 +834,7 @@ MonoBehaviour:
   _bambooSceneIndex: 1
   _summitSceneIndex: 4
   _endSceneIndex: 5
+  _autoStartDelay: 2
 --- !u!4 &1978802210
 Transform:
   m_ObjectHideFlags: 0

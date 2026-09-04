@@ -1,17 +1,15 @@
 %YAML 1.1
-%TAG !u! tag:yousandi.cn,2023:
+%TAG !u! tag:unity3d.com,2011:
 --- !u!29 &1
 OcclusionCullingSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 3
-  m_OcclusionCullingData: {fileID: 0}
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
   m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionEnabled: 0
-  m_DisplayOccluded: 0
-  m_SceneDepthBufferWidth: 512
-  m_SceneDepthBufferHeight: 512
-  m_ShadowDepthBufferWidth: 512
-  m_ShadowDepthBufferHeight: 512
+  m_OcclusionCullingData: {fileID: 0}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -130,12 +128,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 7
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 36730832}
   - component: {fileID: 36730831}
   m_Layer: 0
-  m_HasEditorInfo: 1
   m_Name: SnapTurnProvider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +207,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 7
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 405235579}
   - component: {fileID: 405235578}
@@ -218,7 +215,6 @@ GameObject:
   - component: {fileID: 405235575}
   - component: {fileID: 405235580}
   m_Layer: 0
-  m_HasEditorInfo: 1
   m_Name: XROrigin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,8 +336,6 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_enableGDRP: 1
-  m_backfaceCulling: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -365,13 +359,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 7
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 659064878}
   - component: {fileID: 659064877}
   - component: {fileID: 659064876}
   m_Layer: 0
-  m_HasEditorInfo: 1
   m_Name: FadeCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,12 +431,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 7
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 677329191}
   - component: {fileID: 677329192}
   m_Layer: 0
-  m_HasEditorInfo: 1
   m_Name: BreathSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -567,12 +559,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 7
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 785642395}
   - component: {fileID: 785642394}
   m_Layer: 0
-  m_HasEditorInfo: 1
   m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -616,7 +607,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 7
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 953841612}
   - component: {fileID: 953841611}
@@ -625,7 +616,6 @@ GameObject:
   - component: {fileID: 953841614}
   - component: {fileID: 953841613}
   m_Layer: 0
-  m_HasEditorInfo: 1
   m_Name: MeditationPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -832,12 +822,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 7
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 1021223999}
   - component: {fileID: 1021224000}
   m_Layer: 0
-  m_HasEditorInfo: 1
   m_Name: FootstepSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -961,13 +950,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 7
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 1288283969}
   - component: {fileID: 1288283968}
   - component: {fileID: 1288283970}
   m_Layer: 0
-  m_HasEditorInfo: 1
   m_Name: __Scene_BreathReactive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1036,12 +1024,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 7
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 1394295627}
   - component: {fileID: 1394295626}
   m_Layer: 0
-  m_HasEditorInfo: 1
   m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1110,7 +1097,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
-  m_UseOcclusionCulling: 1
 --- !u!4 &1394295627
 Transform:
   m_ObjectHideFlags: 0
@@ -1132,12 +1118,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 7
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 1431787583}
   - component: {fileID: 1431787582}
   m_Layer: 0
-  m_HasEditorInfo: 1
   m_Name: AmbientSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1261,11 +1246,10 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 7
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 1476123959}
   m_Layer: 0
-  m_HasEditorInfo: 1
   m_Name: CameraOffset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1293,14 +1277,13 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 7
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 1710683385}
   - component: {fileID: 1710683384}
   - component: {fileID: 481055061}
   - component: {fileID: 1710683386}
   m_Layer: 0
-  m_HasEditorInfo: 1
   m_Name: 
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1322,9 +1305,9 @@ MonoBehaviour:
   m_Mediator: {fileID: 481055061}
   m_TransformationPriority: 0
   m_MoveSpeed: 1
-  m_InAirControlModifier: 0.5
   m_EnableStrafe: 1
   m_EnableFly: 0
+  m_UseGravity: 1
   m_ForwardSource: {fileID: 0}
   m_LeftHandMoveInput:
     m_InputSourceMode: 2
@@ -1354,7 +1337,6 @@ MonoBehaviour:
     m_InputActionReference: {fileID: 0}
     m_ObjectReferenceObject: {fileID: 0}
     m_ManualValue: {x: 0, y: 0}
-  m_UseGravity: 1
 --- !u!4 &1710683385
 Transform:
   m_ObjectHideFlags: 0
@@ -1392,12 +1374,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 7
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 1836269710}
   - component: {fileID: 1836269709}
   m_Layer: 0
-  m_HasEditorInfo: 1
   m_Name: AudioRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1444,14 +1425,13 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 7
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 1940398841}
   - component: {fileID: 1940398840}
   - component: {fileID: 1940398839}
   - component: {fileID: 1940398838}
   m_Layer: 0
-  m_HasEditorInfo: 1
   m_Name: BreathCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1475,10 +1455,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
-  m_virtualGeometry: 0
-  m_ShadingRate: 0
-  m_ForceDisableGRD: 0
-  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1504,7 +1480,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
-  m_MaskInteraction: 0
 --- !u!64 &1940398839
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1556,14 +1531,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 7
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 1959009385}
   - component: {fileID: 1959009388}
   - component: {fileID: 1959009387}
   - component: {fileID: 1959009386}
+  - component: {fileID: 1959009389}
   m_Layer: 0
-  m_HasEditorInfo: 1
   m_Name: MainCamera
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1708,25 +1683,34 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_enableGDRP: 1
-  m_backfaceCulling: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1959009389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959009384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccb80b69e9ae242fda08da38b0014230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1967889209
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 7
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 1967889211}
   - component: {fileID: 1967889210}
   m_Layer: 0
-  m_HasEditorInfo: 1
   m_Name: SceneTransition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1769,12 +1753,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 7
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 2057346425}
   - component: {fileID: 2057346424}
   m_Layer: 0
-  m_HasEditorInfo: 1
   m_Name: SceneRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1852,14 +1835,13 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 7
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 2130480678}
   - component: {fileID: 2130480677}
   - component: {fileID: 2130480676}
   - component: {fileID: 2130480675}
   m_Layer: 0
-  m_HasEditorInfo: 1
   m_Name: BreathParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1896,10 +1878,6 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_virtualGeometry: 0
-  m_ShadingRate: 0
-  m_ForceDisableGRD: 0
-  m_ForceDisableSmallMeshCull: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
